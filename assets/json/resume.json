@@ -1,200 +1,239 @@
 {
-  "basics": {
-    "name": "Albert Einstein",
-    "label": "Scientist",
-    "image": "",
-    "email": "albert@einstein.de",
-    "phone": "(912) 123-4567",
-    "url": "https://alshedivat.github.io/al-folio/",
-    "summary": "A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time",
-    "location": {
-      "address": "2712 Broadway St",
-      "postalCode": "CA 94115",
-      "city": "San Francisco",
-      "countryCode": "US",
-      "region": "California"
-    },
-    "profiles": [
-      {
-        "network": "Twitter",
-        "username": "AlbertEinstein",
-        "url": "https://twitter.com/AlbertEinstein"
-      }
-    ]
-  },
-  "work": [
-    {
-      "name": "Institute for Advanced Study, Princeton University",
-      "position": "Professor of Theoretical Physics",
-      "url": "https://example.com",
-      "startDate": "1933-01-01",
-      "endDate": "1955-01-01",
-      "summary": "Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.",
-      "highlights": ["Relativity"]
-    }
-  ],
-  "volunteer": [
-    {
-      "organization": "People's Climate March",
-      "location": "Zurich, Switzerland",
-      "position": "Lead Organizer",
-      "url": "https://example.com",
-      "startDate": "2014-04-01",
-      "endDate": "2015-07-01",
-      "summary": "Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.",
-      "highlights": ["Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march.", "Men of the year 2014 by Time magazine"]
-    }
-  ],
-  "education": [
-    {
-      "institution": "University of Zurich, Zurich, Switzerland",
-      "location": "Zurich, Switzerland",
-      "url": "https://www.uzh.ch/",
-      "area": "Software Development",
-      "studyType": "PhD",
-      "startDate": "1905-01-01",
-      "endDate": "1905-01-01",
-      "score": "10",
-      "courses": ["Theory of Relativity"]
-    }
-  ],
-  "awards": [
-    {
-      "title": "Nobel Prize in Physics",
-      "date": "1921-11-01",
-      "awarder": "Royal Swedish Academy of Sciences",
-      "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/",
-      "summary": "The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'"
-    }
-  ],
-  "certificates": [
-    {
-      "name": "Machine Learning",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-location-dot"
-    },
-    {
-      "name": "Quantum Computing",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-tag"
-    },
-    {
-      "name": "Quantum Information",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-envelope"
-    },
-    {
-      "name": "Quantum Cryptography",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-hashtag"
-    },
-    {
-      "name": "Quantum Communication",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-calendar"
-    },
-    {
-      "name": "Quantum Teleportation",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-clipboard-check"
-    }
-  ],
-  "publications": [
-    {
-      "name": "Zur Elektrody/namik bewegter Körper",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-06-30",
-      "url": "https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies",
-      "summary": "It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source."
-    },
-    {
-      "name": "Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-03-18",
-      "url": "https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt",
-      "summary": "In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921."
-    },
-    {
-      "name": "Die Grundlage der allgemeinen Relativitätstheorie",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1916-03-20",
-      "url": "https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie",
-      "summary": "The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914)."
-    }
-  ],
-  "skills": [
-    {
-      "name": "Physics",
-      "level": "Master",
-      "icon": "fa-solid fa-hashtag",
-      "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
-      ]
-    }
-  ],
-  "languages": [
-    {
-      "language": "German",
-      "fluency": "Native speaker",
-      "icon": ""
-    },
-    {
-      "language": "English",
-      "fluency": "Fluent",
-      "icon": ""
-    }
-  ],
-  "interests": [
-    {
-      "name": "Physics",
-      "icon": "fa-solid fa-tag",
-      "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
-      ]
-    }
-  ],
-  "references": [
-    {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-laptop",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
-    },
-    {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-thumbtack",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
-    }
-  ],
-  "projects": [
-    {
-      "name": "Quantum Computing",
-      "summary": "Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.",
-      "highlights": ["Quantum Teleportation", "Quantum Cryptography"],
-      "startDate": "2018-01-01",
-      "endDate": "2018-01-01",
-      "url": "https://example.com"
-    }
-  ]
+	"basics": {
+	"name": "Fabien MATHE",
+	"label": "Student",
+	"image": "",
+	"email": "f.mathe.pro@outlook.fr",
+	"phone": "On request",
+	"url": "https://fabien-math.github.io/",
+	"summary": "A passionate student of robotics and mechatronics. Responsible for the design and automation of Zéphyr, an autonomous sailing research trimaran. Driven by complex challenges and committed to contributing to cutting-edge projects.",
+	"location": {
+		"address": "",
+		"postalCode": "83100",
+		"city": "Toulon",
+		"countryCode": "FR",
+		"region": "Provence-Alpes-Côte d'Azur"
+	}
+	},
+	"work": [
+	{
+		"name": "Ifremer - French national institute for ocean science and technology",
+		"location": "Mediterranean Center, 83500 La Seyne-sur-Mer, France",
+		"position": "Research Engineer Intern",
+		"url": "https://ifremer.fr",
+		"startDate": "2025-03-03",
+		"endDate": "2025-08-10",
+		"summary": "Contributing to PhD research on visual SLAM for underwater robotics, and contribute to the development and integration of the Stonefish simulator"
+	},
+	{
+		"position": "Research Engineer Intern",
+		"name": "Czech Technical University",
+		"location": "Prague, Czech Republic",
+		"duration": "4 months, 2024",
+		"description": "Worked on advanced mechanical and mechatronic simulations under the supervision of Prof. Ing. Michael Valášek."
+	},
+	{
+		"position": "Research & Development Intern",
+		"name": "IMATH Laboratory & HydroSharks",
+		"location": "Toulon, France",
+		"duration": "5 weeks, 2023",
+		"description": "Developed simulations and conducted mechanical studies related to the HydroSharks naval engineering projects."
+	}
+	],
+	"volunteer": [
+		{
+			"position": "President",
+			"organization": "HydroSharks - Naval Engineering Association",
+			"location": "Toulon, France",
+			"startDate": "2023-02",
+			"endDate": "2024-03",
+			"summary": "Managed and coordinated naval construction projects, including the development of an autonomous trimaran."
+		}
+	],
+	"education": [
+	{
+		"degree": "Engineering Diploma",
+		"area": "Structural Analysis and Numerical Modeling (Finite and Volume Elements)",
+		"institution": "SeaTech",
+		"url": "https://seatech.univ-tln.fr/",
+		"location": "Toulon, France",
+		"year": "2022 - 2025",
+		"electives": [
+			"Artificial Intelligence",
+			"Naval Architecture and Hydrodynamics",
+			"3D Oceanography"
+		],
+		"projects": [
+			"3rd year - Underground robotic exploration and multi-robot coordination",
+			"2nd year - Underwater image classification using neural networks",
+			"1st year - Design and simulation of innovative foils for low-speed leisure catamarans"
+		]
+	},
+	{
+		"degree": "Preparatory Classes for Engineering Schools",
+		"field": "PCSI (Physics, Chemistry, and Engineering Science) - PSI (Physics and Engineering Science)",
+		"institution": "Saint Stanislas",
+		"url": "https://www.saintstanislas.eu/",
+		"location": "Nantes, France",
+		"year": "2020 - 2022",
+		"competition_project": "Construction of a 3-axis Cartesian robot for automatic waste sorting, with an algorithm based on color and size detection"
+	  },
+	  {
+		"degree": "Scientific Baccalaureate",
+		"field": "Engineering Science",
+		"institution": "Saint-Sébastien-sur-Loire",
+		"location": "France",
+		"year": "2019 - 2020",
+		"honors": "Good (Bien)"
+	  }
+	],
+	"skills": [
+	{
+		"name": "Programming",
+		"level": "Master",
+		"icon": "fa-solid fa-hashtag",
+		"keywords": [
+		"C",
+		"C#",
+		"C++",
+		"Python",
+		"Fortran"
+		]
+	},
+	{
+		"name": "CAD",
+		"level": "Master",
+		"icon": "fa-solid fa-hashtag",
+		"keywords": [
+			"Fusion360",
+			"FreeCAD",
+			"SolidWorks"
+		]
+	},
+	{
+		"name": "Dev",
+		"level": "Master",
+		"icon": "fa-solid fa-hashtag",
+		"keywords": [
+			"git",
+			"Docker",
+			"Unity",
+			"ROS"		
+		]
+	},
+	{
+		"name": "CFD (Computational Fluid Dynamics)",
+		"level": "Master",
+		"icon": "fa-solid fa-hashtag",
+		"keywords": [
+			"Ansys Fluent",
+			"OpenFOAM"
+		]
+	},
+	{
+		"name": "FEA (Finite Element Analysis)",
+		"level": "Master",
+		"icon": "fa-solid fa-hashtag",
+		"keywords": [
+			"Ansys Mechanical",
+			"Abaqus"
+		]
+	},
+	{
+		"name": "3D modeling",
+		"level": "Master",
+		"icon": "fa-solid fa-hashtag",
+		"keywords": [
+			"Blender"
+		]
+	},
+	{
+		"name": "Photo and video editing",
+		"level": "Master",
+		"icon": "fa-solid fa-hashtag",
+		"keywords": [
+			"GIMP",
+			"HitFilm",
+			"DaVinci Resolve",
+			"Inkscape"
+		]
+	}
+	],
+	"languages": [
+	{
+		"language": "French",
+		"fluency": "Native speaker",
+		"icon": ""
+	},
+	{
+		"language": "English",
+		"fluency": "Advanced - TOEIC 960/990",
+		"icon": ""
+	}
+	],
+	"interests": [
+	{
+		"name": "Robotics",
+		"icon": "fa-solid fa-tag",
+		"keywords": [
+		"Underwater Robotics",
+		"Underground Robotics",
+		"Multi-Agent Systems"
+		]
+	},
+	{
+		"name": "Sports",
+		"icon": "fa-solid fa-tag",
+		"keywords": [
+		"Mointain hiking",
+		"Clinmbing",
+		"Trekking"
+		]
+	}
+	],
+	"references": [
+	{
+		"name": "Frédéric GOLAY",
+		"icon": "fa-solid fa-laptop",
+		"institution": "Seatech UTLN, IMATH",
+		"title": "Associate Professor of Mechanics",
+		"contact": {
+			"phone": "On request",
+			"email": "On request"
+		}
+	},
+	{
+		"institution": "CTU in Prague",
+		"title": "Head - Division of Mechanics and Mechatronics",
+		"name": "Prof. Ing. Michael Valášek",
+		"contact": {
+			"phone": "On request",
+			"email": "On request"
+		}
+	}
+	],
+	"projects": [
+	{
+
+		"name": "Zephyr - Autonomous Sailing Trimaran",
+		"summary": "Led a team of 20 students in the design and automation of a 5-meter autonomous sailing trimaran. Developed obstacle detection and avoidance algorithms, navigation systems, and automation processes.",
+		"startDate": "2022",
+		"endDate": "Present",
+		"url": "https://hydrosharks.github.io/WikiZephyr/"
+	},
+	{
+		"name": "Eel-Inspired Robot Design",
+		"summary": "Designed a bio-inspired robotic system for underwater cave exploration.",
+		"startDate": "2024",
+		"endDate": "Present",
+		"url": "https://fabien-math.github.io/projects/"
+	},
+	{
+		"name": "Real-Time Sailing Simulator",
+		"summary": "Developed a multi-physics simulation of a sailing yacht, including realistic environment modeling and statistical weather systems. Designed for AI training and long-term mission planning.",
+		"startDate": "2024",
+		"endDate": "Present",
+		"url": "https://fabien-math.github.io/projects/"
+	}
+]
 }

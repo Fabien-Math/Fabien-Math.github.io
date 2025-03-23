@@ -1,14 +1,12 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - Fabien-Math
 
 repo_description_lines_max: 2
 
 github_repos:
-  - alshedivat/al-folio
-  - jekyll/jekyll
-  - twbs/bootstrap
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - mathjax/MathJax
-  - jpswalsh/academicons
+  - Fabien-Math/Multi-Robot-Cave-Exploration-Project
+  - Fabien-Math/HydroCognition
+  - YohStablo/FV_Solver_2D
+  - HydroSharks/WikiZephyr
+  - Fabien-Math/Collision_Avoidance
+  - Fabien-Math/HydroSimWiki

@@ -18,7 +18,7 @@
 	"work": [
 	{
 		"name": "Ifremer - French national institute for ocean science and technology",
-		"location": "Mediterranean Center, 83500 La Seyne-sur-Mer, France",
+		"location": "Mediterranean Center, France",
 		"position": "Research Engineer Intern",
 		"url": "https://ifremer.fr",
 		"startDate": "2025-03-03",
@@ -28,26 +28,29 @@
 	{
 		"position": "Research Engineer Intern",
 		"name": "Czech Technical University",
+		"startDate": "2024-04-22",
+		"endDate": "2024-08-09",
 		"location": "Prague, Czech Republic",
-		"duration": "4 months, 2024",
-		"description": "Worked on advanced mechanical and mechatronic simulations under the supervision of Prof. Ing. Michael Valášek."
+		"summary": "Worked on advanced mechanical and mechatronic simulations under the supervision of Prof. Ing. Michael Valášek."
 	},
 	{
 		"position": "Research & Development Intern",
 		"name": "IMATH Laboratory & HydroSharks",
 		"location": "Toulon, France",
-		"duration": "5 weeks, 2023",
-		"description": "Developed simulations and conducted mechanical studies related to the HydroSharks naval engineering projects."
+		"startDate": "2024-06-19",
+		"endDate": "2024-07-23",
+		"summary": "Developed simulations and conducted mechanical studies related to the HydroSharks naval engineering projects."
 	}
 	],
 	"volunteer": [
 		{
 			"position": "President",
 			"organization": "HydroSharks - Naval Engineering Association",
+			"url": "https://hydrosharks.github.io/WikiZephyr/",
 			"location": "Toulon, France",
 			"startDate": "2023-02",
 			"endDate": "2024-03",
-			"summary": "Managed and coordinated naval construction projects, including the development of an autonomous trimaran."
+			"summary": "Led a team of 20 students in the design and automation of a 5-meter autonomous sailing trimaran. Developed obstacle detection and avoidance algorithms, navigation systems, and automation processes."
 		}
 	],
 	"education": [
@@ -57,13 +60,9 @@
 		"institution": "SeaTech",
 		"url": "https://seatech.univ-tln.fr/",
 		"location": "Toulon, France",
-		"year": "2022 - 2025",
-		"electives": [
-			"Artificial Intelligence",
-			"Naval Architecture and Hydrodynamics",
-			"3D Oceanography"
-		],
-		"projects": [
+		"startDate": "2022",
+		"endDate": "2025",
+		"highlights": [
 			"3rd year - Underground robotic exploration and multi-robot coordination",
 			"2nd year - Underwater image classification using neural networks",
 			"1st year - Design and simulation of innovative foils for low-speed leisure catamarans"
@@ -71,19 +70,23 @@
 	},
 	{
 		"degree": "Preparatory Classes for Engineering Schools",
-		"field": "PCSI (Physics, Chemistry, and Engineering Science) - PSI (Physics and Engineering Science)",
+		"area": "PCSI (Physics, Chemistry, and Engineering Science) - PSI (Physics and Engineering Science)",
 		"institution": "Saint Stanislas",
 		"url": "https://www.saintstanislas.eu/",
 		"location": "Nantes, France",
-		"year": "2020 - 2022",
-		"competition_project": "Construction of a 3-axis Cartesian robot for automatic waste sorting, with an algorithm based on color and size detection"
-	  },
+		"startDate": "2020",
+		"endDate": "2022",
+		"highlights": [
+			"Construction of a 3-axis Cartesian robot for automatic waste sorting, with an algorithm based on color and size detection"
+		]
+		},
 	  {
 		"degree": "Scientific Baccalaureate",
-		"field": "Engineering Science",
-		"institution": "Saint-Sébastien-sur-Loire",
-		"location": "France",
-		"year": "2019 - 2020",
+		"area": "Engineering Science",
+		"institution": "La Joliverie",
+		"location": "Saint-Sébastien-sur-Loire, France",
+		"startDate": "2019",
+		"endDate": "2020",
 		"honors": "Good (Bien)"
 	  }
 	],
@@ -195,32 +198,16 @@
 	{
 		"name": "Frédéric GOLAY",
 		"icon": "fa-solid fa-laptop",
-		"institution": "Seatech UTLN, IMATH",
-		"title": "Associate Professor of Mechanics",
-		"contact": {
-			"phone": "On request",
-			"email": "On request"
-		}
+		"reference": "Seatech UTLN, IMATH\nAssociate Professor of Mechanics"
 	},
 	{
-		"institution": "CTU in Prague",
-		"title": "Head - Division of Mechanics and Mechatronics",
 		"name": "Prof. Ing. Michael Valášek",
-		"contact": {
-			"phone": "On request",
-			"email": "On request"
-		}
+		"icon": "fa-solid fa-laptop",
+		"reference": "CTU in Prague\nHead - Division of Mechanics and Mechatronics"
 	}
 	],
 	"projects": [
-	{
-
-		"name": "Zephyr - Autonomous Sailing Trimaran",
-		"summary": "Led a team of 20 students in the design and automation of a 5-meter autonomous sailing trimaran. Developed obstacle detection and avoidance algorithms, navigation systems, and automation processes.",
-		"startDate": "2022",
-		"endDate": "Present",
-		"url": "https://hydrosharks.github.io/WikiZephyr/"
-	},
+	
 	{
 		"name": "Eel-Inspired Robot Design",
 		"summary": "Designed a bio-inspired robotic system for underwater cave exploration.",
@@ -234,6 +221,13 @@
 		"startDate": "2024",
 		"endDate": "Present",
 		"url": "https://fabien-math.github.io/projects/"
+	},
+	{
+		"name": "Zephyr - Autonomous Sailing Trimaran",
+		"summary": "The Zéphyr project involves the design and construction of an autonomous research trimaran powered solely by wind, featuring two rigid sails for improved wind capture and maneuverability, with a modular design for easy transport and versatility in mission execution.",
+		"startDate": "2022",
+		"endDate": "Present",
+		"url": "https://hydrosharks.github.io/WikiZephyr/"
 	}
 ]
 }

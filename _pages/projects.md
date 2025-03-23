@@ -1,11 +1,11 @@
 ---
 layout: page
-title: projects
+title: Projects
 permalink: /projects/
-description: A growing collection of your cool projects.
+description: A collection of innovative projects that I have contributed to and will continue to develop, spanning robotics, mechatronics, autonomous systems, and simulation.
 nav: true
 nav_order: 3
-display_categories: [work, fun]
+display_categories: [My project, HydroSharks]
 horizontal: false
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: default
-permalink: /blog/
-title: blog
+permalink: /codeLib/
+title: Code'Lib
 nav: true
 nav_order: 1
 pagination:

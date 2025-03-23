@@ -1,17 +1,14 @@
 ---
 layout: about
-title: about
+title: Home
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: 
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: logo_square.png
   image_circular: false # crops the image to make it circular
-  more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+  more_info:
 
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: false # includes social icons at the bottom of the page
@@ -27,7 +24,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am an engineering student at [**SeaTech**](https://seatech.univ-tln.fr/) Toulon, specializing in the **MOCA** program (Modeling and Numerical Simulation for Fluids and Structures). Passionate about robotics and mechatronics, I continuously expand my expertise through ambitious projects. My ultimate goal is to develop a fully autonomous multi-agent system for exploring underwater and underground caves.  
+I am an engineering student at [**SeaTech**](https://seatech.univ-tln.fr/) Toulon - France, specializing in the **MOCA** program (Modeling and Numerical Simulation for Fluids and Structures). Passionate about robotics and mechatronics, I continuously expand my expertise through ambitious projects. My ultimate goal is to develop a fully autonomous multi-agent system for exploring underwater and underground caves.  
 
 Currently, I am an intern at Ifremer, contributing to research on visual SLAM for underwater applications. Beyond this work, I dedicate my free time to three other projects.  
 

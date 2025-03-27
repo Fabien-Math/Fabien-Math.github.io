@@ -37,7 +37,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/CV/";
           },
-        },{id: "post-orthogonal-projection",
+        },{id: "post-python-matplolib-exemple",
+      
+        title: "Python matplolib exemple",
+      
+      description: "Comprehensive examples showcasing matplotlib&#39;s plotting capabilities in Python, including line plots, scatter plots, ... Includes code samples and explanations.",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/matplotlib_exemple/";
+        
+      },
+    },{id: "post-orthogonal-projection",
       
         title: "Orthogonal projection",
       

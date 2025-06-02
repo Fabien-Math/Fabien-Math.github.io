@@ -37,7 +37,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/CV/";
           },
-        },{id: "post-python-matplolib-exemple",
+        },{id: "post-useful-math-functions",
+      
+        title: "Useful math functions",
+      
+      description: "Mathematical function utility in Python",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/math_functions/";
+        
+      },
+    },{id: "post-python-matplolib-exemple",
       
         title: "Python matplolib exemple",
       

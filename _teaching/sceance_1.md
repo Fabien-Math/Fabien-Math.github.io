@@ -87,4 +87,4 @@ if __name__ == "__main__":
 
 ### Exercice 1
 
-[Exercice 1](Exercices/exercice_1.md)
+[Exercice 1](exercice_1.md)

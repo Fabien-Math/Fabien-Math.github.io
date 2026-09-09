@@ -24,7 +24,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am an engineering student at [**SeaTech**](https://seatech.univ-tln.fr/) Toulon - France, specializing in the **MOCA** program (Modeling and Numerical Simulation for Fluids and Structures). Passionate about robotics and mechatronics, I continuously expand my expertise through ambitious projects. My ultimate goal is to develop a fully autonomous multi-agent system for exploring underwater and underground caves.  
+<!-- I am an engineering student at [**SeaTech**](https://seatech.univ-tln.fr/) Toulon - France, specializing in the **MOCA** program (Modeling and Numerical Simulation for Fluids and Structures). Passionate about robotics and mechatronics, I continuously expand my expertise through ambitious projects. My ultimate goal is to develop a fully autonomous multi-agent system for exploring underwater and underground caves.  
 
 Currently, I am an intern at Ifremer, contributing to research on visual SLAM for underwater applications. Beyond this work, I dedicate my free time to three other projects.  
 
@@ -32,4 +32,4 @@ The one closest to my heart is [**Zéphyr**](https://hydrosharks.github.io/WikiZ
 
 From this project emerged another initiative: the development of a real-time, photorealistic sailing simulation in *Unity* named [**Hydro'Sim**](https://fabien-math.github.io/HydroSimWiki/). While the project is already well advanced, it still requires significant work to reach its full potential.  
 
-Lastly, aligning with my long-term ambitions, I am currently designing and engineering a bio-inspired drone intended for the exploration of underwater and underground cavities called **Beacon**, combining nature’s efficiency with technology.
+Lastly, aligning with my long-term ambitions, I am currently designing and engineering a bio-inspired drone intended for the exploration of underwater and underground cavities called **Beacon**, combining nature’s efficiency with technology. -->

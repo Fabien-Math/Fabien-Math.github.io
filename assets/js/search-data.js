@@ -37,6 +37,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/CV/";
           },
+        },{id: "nav-teaching",
+          title: "teaching",
+          description: "Teaching materials.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/teaching/";
+          },
         },{id: "post-useful-math-functions",
       
         title: "Useful math functions",

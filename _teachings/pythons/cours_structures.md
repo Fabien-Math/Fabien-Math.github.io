@@ -3,7 +3,7 @@ layout: page
 title: Python - Structures
 permalink: /enseignement/python_scripts/cours_structures
 toc:
-  sidebar: left
+  sidebar: right
 ---
 
 

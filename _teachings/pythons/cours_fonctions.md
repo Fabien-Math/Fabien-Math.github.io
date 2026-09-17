@@ -3,7 +3,7 @@ layout: page
 title: Python - Fonctions
 permalink: /enseignement/python_scripts/cours_fonctions
 toc:
-  sidebar: left
+  sidebar: right
 ---
 
 

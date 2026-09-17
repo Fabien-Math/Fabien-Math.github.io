@@ -3,7 +3,7 @@ layout: page
 title: Python - Types basiques
 permalink: /enseignement/python_scripts/demo_matplotlib
 toc:
-  sidebar: left
+  sidebar: right
 ---
 
 

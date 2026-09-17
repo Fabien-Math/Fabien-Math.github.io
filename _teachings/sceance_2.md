@@ -2,6 +2,8 @@
 layout: page
 title: Python - Scéance 2
 permalink: /enseignement/sceance2
+toc:
+  sidebar: right
 ---
 
 
@@ -53,7 +55,7 @@ Python
 
 ## Les dictionnaires
 [Cours dictionnaires](/enseignement/python_scripts/cours_dictionnaires)
-[Exercice sur les dictionnaires](Exercices/ex2.md)
+[Exercice sur les dictionnaires](/enseignement/python/ex2)
 
 ## Les imports de modules
 [Cours imports](/enseignement/python_scripts/cours_imports)

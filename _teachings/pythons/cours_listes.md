@@ -3,7 +3,7 @@ layout: page
 title: Python - Listes
 permalink: /enseignement/python_scripts/cours_listes
 toc:
-  sidebar: left
+  sidebar: right
 ---
 
 

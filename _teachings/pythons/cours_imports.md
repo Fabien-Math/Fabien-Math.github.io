@@ -3,7 +3,7 @@ layout: page
 title: Python - Imports
 permalink: /enseignement/python_scripts/cours_imports
 toc:
-  sidebar: left
+  sidebar: right
 ---
 
 # Les imports en python

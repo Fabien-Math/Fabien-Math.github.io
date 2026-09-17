@@ -3,7 +3,7 @@ layout: page
 title: Python - Scéance 1
 permalink: /enseignement/sceance1
 toc:
-  sidebar: left
+  sidebar: right
 ---
 
 # Python
@@ -104,9 +104,9 @@ if __name__ == "__main__":
 
 ### Exercice 1
 
-[Exercice 1](Exercices/ex1.md)
+[Exercice 1](/enseignement/python/ex1)
 
 
 ## Début du TP
 
-[TP](../TP.md)
+[TP](/enseignement/TP.md)

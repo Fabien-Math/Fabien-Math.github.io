@@ -3,7 +3,7 @@ layout: page
 title: Python - Formatage
 permalink: /enseignement/python_scripts/cours_formatages
 toc:
-  sidebar: left
+  sidebar: right
 ---
 
 

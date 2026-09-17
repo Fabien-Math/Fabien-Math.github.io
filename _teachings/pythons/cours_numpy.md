@@ -3,7 +3,7 @@ layout: page
 title: Python - Numpy
 permalink: /enseignement/python_scripts/cours_numpy
 toc:
-  sidebar: left
+  sidebar: right
 ---
 
 ```python

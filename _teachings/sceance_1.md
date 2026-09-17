@@ -1,6 +1,9 @@
 ---
 layout: page
 title: Python - Scéance 1
+permalink: /enseignement/sceance1
+toc:
+  sidebar: left
 ---
 
 # Python
@@ -47,28 +50,28 @@ Python
 ```
 
 ## Les types de données en Python
-[Cours types de données](pythons/cours_types_basiques.py)
+[Cours types de données](/enseignement/python_scripts/cours_types_basiques)
 
 ## Les operateurs en Python
-[Cours opérateurs](pythons/cours_operateurs.py)
+[Cours opérateurs](/enseignement/python_scripts/cours_operateurs)
 
 ## Les conditions et boucles
-[Cours structures](pythons/cours_structures.py)
+[Cours structures](/enseignement/python_scripts/cours_structures)
 
 ## Les listes
-[Cours listes](pythons/cours_listes.py)
+[Cours listes](/enseignement/python_scripts/cours_listes)
 
 ## Les fonctions
-[Cours fonctions](pythons/cours_fonctions.py)
+[Cours fonctions](/enseignement/python_scripts/cours_fonctions)
 
 ## Formatages
-[Cours formatages](pythons/cours_formatages.py)
+[Cours formatages](/enseignement/python_scripts/cours_formatages)
 
 ## Debug
-[Cours debug](pythons/cours_debug.py)
+[Cours debug](/enseignement/python_scripts/cours_debug)
 
 ## Convention de nommage
-[Cours convention de nommage](pythons/cours_conventions_nommage.py)
+[Cours convention de nommage](/enseignement/python_scripts/cours_conventions_nommage)
 
 
 ## Un premier programme

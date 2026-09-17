@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Python - Dictionnaires
-permalink: /enseignement/python_scripts/
+permalink: /enseignement/python_scripts/cours_dictionnaires
 ---
 
 ## Les dictionnaires en python

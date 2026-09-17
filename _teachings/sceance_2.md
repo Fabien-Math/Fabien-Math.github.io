@@ -1,8 +1,7 @@
 ---
-layout: course
-title: Python Fundamentals - Scéance 2
-year: 2026
-course_id: python-fundamentals-2
+layout: page
+title: Python - Scéance 2
+permalink: /enseignement/
 ---
 
 

@@ -49,29 +49,29 @@ Python
 ```
 
 ## Les listes
-[Cours listes](pythons/cours_listes.py)
+[Cours listes](/enseignement/python_scripts/cours_listes)
 
 ## Les dictionnaires
-[Cours dictionnaires](pythons/cours_dictionnaires.py)
+[Cours dictionnaires](/enseignement/python_scripts/cours_dictionnaires)
 [Exercice sur les dictionnaires](Exercices/ex2.md)
 
 ## Les imports de modules
-[Cours imports](pythons/cours_imports.py)
+[Cours imports](/enseignement/python_scripts/cours_imports)
 
 ## NumPy
-[Cours NumPy](pythons/cours_numpy.py)
+[Cours NumPy](/enseignement/python_scripts/cours_numpy)
 
 ## Matplotlib
-[Cours Matplotlib](pythons/demo_matplotlib.py)
+[Cours Matplotlib](/enseignement/python_scripts/demo_matplotlib)
 
 ## Formatages
-[Cours formatages](pythons/cours_formatages.py)
+[Cours formatages](/enseignement/python_scripts/cours_formatages)
 
 ## Debug
-[Cours debug](pythons/cours_debug.py)
+[Cours debug](/enseignement/python_scripts/cours_debug)
 
 ## Convention de nommage
-[Cours convention de nommage](pythons/cours_conventions_nommage.py)
+[Cours convention de nommage](/enseignement/python_scripts/cours_conventions_nommage)
 
 ## Suite du TP
 

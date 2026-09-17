@@ -1,0 +1,185 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> Python — Main fonctions | Fabien's website </title> <meta name="author" content="Fabien M"> <meta name="description" content="A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design. "> <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website"> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
+  :root {
+    --max-content-width: 930px;
+  }
+</style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tocbot@4.36.4/dist/tocbot.css" integrity="sha256-zTN0r+0OKaIv2xqeNNIYxNk0pWJ6+IqPGc1iDgVzWF0=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?v=3116ba77db9ee1581d05bb3e86fbf7f1"> <link rel="canonical" href="https://fabien-math.github.io/enseignement/cheatsheets/functions"> <script src="/assets/js/theme.js?v=5286c3e4c334d0ecb8fc0c40ff4fa7ec"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+    initTheme();
+  </script> </head> <body class="fixed-top-nav sticky-bottom-footer"> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> Fabien's website </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">About </a> </li> <li class="nav-item "> <a class="nav-link" href="/teaching/">Enseignement </a> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="row"> <div class="col-sm-9"> <div class="post"> <header class="post-header"> <h1 class="post-title">Python — Main fonctions</h1> <p class="post-description"></p> </header> <article> <table> <thead> <tr> <th>Fonction</th> <th>Exemple</th> <th>Description</th> </tr> </thead> <tbody> <tr> <td><code class="language-plaintext highlighter-rouge">print()</code></td> <td><code class="language-plaintext highlighter-rouge">print("Hello")</code></td> <td>Affiche une valeur</td> </tr> <tr> <td><code class="language-plaintext highlighter-rouge">input()</code></td> <td><code class="language-plaintext highlighter-rouge">input("Nom : ")</code></td> <td>Lit une saisie utilisateur</td> </tr> <tr> <td><code class="language-plaintext highlighter-rouge">type()</code></td> <td><code class="language-plaintext highlighter-rouge">type(x)</code></td> <td>Retourne le type d’un objet</td> </tr> <tr> <td><code class="language-plaintext highlighter-rouge">isinstance()</code></td> <td><code class="language-plaintext highlighter-rouge">isinstance(x, int)</code></td> <td>Vérifie le type d’un objet</td> </tr> <tr> <td><code class="language-plaintext highlighter-rouge">len()</code></td> <td><code class="language-plaintext highlighter-rouge">len([1, 2, 3])</code></td> <td>Retourne la longueur</td> </tr> <tr> <td><code class="language-plaintext highlighter-rouge">range()</code></td> <td><code class="language-plaintext highlighter-rouge">range(10)</code></td> <td>Génère une séquence d’entiers</td> </tr> <tr> <td><code class="language-plaintext highlighter-rouge">enumerate()</code></td> <td><code class="language-plaintext highlighter-rouge">enumerate(values)</code></td> <td>Parcourt une collection avec son index</td> </tr> <tr> <td><code class="language-plaintext highlighter-rouge">zip()</code></td> <td><code class="language-plaintext highlighter-rouge">zip(a, b)</code></td> <td>Parcourt plusieurs collections simultanément</td> </tr> <tr> <td><code class="language-plaintext highlighter-rouge">sorted()</code></td> <td><code class="language-plaintext highlighter-rouge">sorted(values)</code></td> <td>Retourne une collection triée</td> </tr> <tr> <td><code class="language-plaintext highlighter-rouge">reversed()</code></td> <td><code class="language-plaintext highlighter-rouge">reversed(values)</code></td> <td>Retourne une séquence inversée</td> </tr> <tr> <td><code class="language-plaintext highlighter-rouge">min()</code></td> <td><code class="language-plaintext highlighter-rouge">min(values)</code></td> <td>Retourne la valeur minimale</td> </tr> <tr> <td><code class="language-plaintext highlighter-rouge">max()</code></td> <td><code class="language-plaintext highlighter-rouge">max(values)</code></td> <td>Retourne la valeur maximale</td> </tr> <tr> <td><code class="language-plaintext highlighter-rouge">sum()</code></td> <td><code class="language-plaintext highlighter-rouge">sum(values)</code></td> <td>Calcule la somme</td> </tr> <tr> <td><code class="language-plaintext highlighter-rouge">abs()</code></td> <td><code class="language-plaintext highlighter-rouge">abs(-5)</code></td> <td>Valeur absolue</td> </tr> <tr> <td><code class="language-plaintext highlighter-rouge">round()</code></td> <td><code class="language-plaintext highlighter-rouge">round(3.14159, 2)</code></td> <td>Arrondit un nombre</td> </tr> <tr> <td><code class="language-plaintext highlighter-rouge">pow()</code></td> <td><code class="language-plaintext highlighter-rouge">pow(2, 3)</code></td> <td>Calcule une puissance</td> </tr> <tr> <td><code class="language-plaintext highlighter-rouge">divmod()</code></td> <td><code class="language-plaintext highlighter-rouge">divmod(10, 3)</code></td> <td>Retourne quotient et reste</td> </tr> <tr> <td><code class="language-plaintext highlighter-rouge">int()</code></td> <td><code class="language-plaintext highlighter-rouge">int("42")</code></td> <td>Convertit en entier</td> </tr> <tr> <td><code class="language-plaintext highlighter-rouge">float()</code></td> <td><code class="language-plaintext highlighter-rouge">float("3.14")</code></td> <td>Convertit en réel</td> </tr> <tr> <td><code class="language-plaintext highlighter-rouge">str()</code></td> <td><code class="language-plaintext highlighter-rouge">str(42)</code></td> <td>Convertit en chaîne</td> </tr> <tr> <td><code class="language-plaintext highlighter-rouge">bool()</code></td> <td><code class="language-plaintext highlighter-rouge">bool(1)</code></td> <td>Convertit en booléen</td> </tr> <tr> <td><code class="language-plaintext highlighter-rouge">list()</code></td> <td><code class="language-plaintext highlighter-rouge">list(range(5))</code></td> <td>Crée une liste</td> </tr> <tr> <td><code class="language-plaintext highlighter-rouge">tuple()</code></td> <td><code class="language-plaintext highlighter-rouge">tuple([1, 2, 3])</code></td> <td>Crée un tuple</td> </tr> <tr> <td><code class="language-plaintext highlighter-rouge">set()</code></td> <td><code class="language-plaintext highlighter-rouge">set([1, 2, 2, 3])</code></td> <td>Crée un ensemble</td> </tr> <tr> <td><code class="language-plaintext highlighter-rouge">dict()</code></td> <td><code class="language-plaintext highlighter-rouge">dict(a=1, b=2)</code></td> <td>Crée un dictionnaire</td> </tr> <tr> <td><code class="language-plaintext highlighter-rouge">any()</code></td> <td><code class="language-plaintext highlighter-rouge">any([False, True])</code></td> <td> <code class="language-plaintext highlighter-rouge">True</code> si au moins un élément est vrai</td> </tr> <tr> <td><code class="language-plaintext highlighter-rouge">all()</code></td> <td><code class="language-plaintext highlighter-rouge">all([True, True])</code></td> <td> <code class="language-plaintext highlighter-rouge">True</code> si tous les éléments sont vrais</td> </tr> <tr> <td><code class="language-plaintext highlighter-rouge">dir()</code></td> <td><code class="language-plaintext highlighter-rouge">dir(obj)</code></td> <td>Liste les attributs et méthodes</td> </tr> <tr> <td><code class="language-plaintext highlighter-rouge">help()</code></td> <td><code class="language-plaintext highlighter-rouge">help(print)</code></td> <td>Affiche la documentation</td> </tr> <tr> <td><code class="language-plaintext highlighter-rouge">id()</code></td> <td><code class="language-plaintext highlighter-rouge">id(obj)</code></td> <td>Retourne l’identifiant de l’objet</td> </tr> <tr> <td><code class="language-plaintext highlighter-rouge">open()</code></td> <td><code class="language-plaintext highlighter-rouge">open("data.txt")</code></td> <td>Ouvre un fichier</td> </tr> <tr> <td><code class="language-plaintext highlighter-rouge">eval()</code></td> <td><code class="language-plaintext highlighter-rouge">eval("2 + 3")</code></td> <td>Évalue une expression Python</td> </tr> <tr> <td><code class="language-plaintext highlighter-rouge">exec()</code></td> <td><code class="language-plaintext highlighter-rouge">exec(code)</code></td> <td>Exécute du code Python</td> </tr> </tbody> </table> </article> </div> </div> <div class="col-sm-3"> <nav id="toc-sidebar" class="sticky-top toc toc-sidebar" aria-label="Table of contents" data-toc-collapse="expanded" data-toc-collapse-depth=""></nav> </div> </div> </div> <footer class="sticky-bottom mt-5" role="contentinfo"> <div class="container"> © Copyright 2026 Fabien M. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="external nofollow noopener">Unsplash</a>. </div> </footer> <script>
+  window.alFolio = {
+    compatBootstrap: false
+  };
+</script> <script src="/assets/js/nav-toggle.js?v=141bd79a73ebc0f0b6ea58e440ae79fc"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?v=e49affc7bd2646f6acdad1dbe02c2359" type="text/javascript"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/al_math/js/mathjax-setup.js"></script> <script src="/assets/js/tooltips-setup.js?v=fe487e99db6c43751e6e7bdb2d6a0611"></script> <script defer src="https://cdn.jsdelivr.net/npm/tocbot@4.36.4/dist/tocbot.min.js" integrity="sha256-lo/r+jQ81wWrxdIiiiEEd538z4+dTJTt+leOuAS7GCw=" crossorigin="anonymous"></script> <script src="/assets/js/no_defer.js?v=53b1b1a645525975c963ce8bf8bfefcf"></script> <script defer src="/assets/js/common.js?v=87baac90f765f2f3362dcf6aaf312a8a"></script> <script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?v=896d254890d9b47f0281f63bfccf0dee"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/al_img_tools/js/zoom.js"></script> <script defer src="/assets/js/progress-bar.js?v=499464c5c63ced6cf7ad62509f1e2610" type="text/javascript"></script> <script src="https://cdn.jsdelivr.net/npm/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js" integrity="sha256-uMJJ3EoTyfRBoTbR+lrfu1uRQ87RZG8AR3cVNuQVeFg=" crossorigin="anonymous"></script> <script>
+    addBackToTop();
+  </script> <script type="module" src="/assets/al_search/js/search/ninja-keys.min.js"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/al_search/js/search-setup.js"></script> <script>
+// get the ninja-keys element
+const ninja = document.querySelector('ninja-keys');
+
+// add the home and posts menu items
+ninja.data = [{
+    id: "nav-about",
+    title: "About",
+    section: "Navigation",
+    handler: () => {
+      window.location.href = "/";
+    },
+  },{id: "nav-enseignement",
+          title: "Enseignement",
+          description: "Cours et ressources.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/teaching/";
+          },
+        },{id: "teachings-python-scéance-1",
+          title: 'Python - Scéance 1',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/enseignement/TP1";
+            },},{id: "teachings-python-conditions-loops-and-exceptions",
+          title: 'Python — Conditions, loops and exceptions',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/enseignement/cheatsheets/control_flow";
+            },},{id: "teachings-python-main-fonctions",
+          title: 'Python — Main fonctions',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/enseignement/cheatsheets/functions";
+            },},{id: "teachings-python-keywords-and-instructions",
+          title: 'Python — Keywords and instructions',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/enseignement/cheatsheets/instructions";
+            },},{id: "teachings-python-matplotlib",
+          title: 'Python — MatPlotLib',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/enseignement/cheatsheets/matplotlib";
+            },},{id: "teachings-python-numpy",
+          title: 'Python — NumPy',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/enseignement/cheatsheets/numpy";
+            },},{id: "teachings-python-operators",
+          title: 'Python — Operators',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/enseignement/cheatsheets/operators";
+            },},{id: "teachings-python-data-types",
+          title: 'Python — Data types',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/enseignement/cheatsheets/data_types";
+            },},{id: "teachings-python-exercice-gestion-d-un-inventaire",
+          title: 'Python - Exercice - Gestion d’un inventaire',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/enseignement/python/ex1";
+            },},{id: "teachings-python-exercice-gestion-d-un-inventaire",
+          title: 'Python - Exercice - Gestion d’un inventaire',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/enseignement/python/ex2";
+            },},{id: "teachings-python-fundamentals",
+          title: 'Python Fundamentals',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/python-fundamentals.html";
+            },},{id: "teachings-python-convention-de-nommage",
+          title: 'Python - Convention de nommage',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/enseignement/python_scripts/conventions_nommage";
+            },},{id: "teachings-python-outils-de-debug",
+          title: 'Python - Outils de debug',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/enseignement/python_scripts/cours_debug";
+            },},{id: "teachings-python-dictionnaires",
+          title: 'Python - Dictionnaires',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/enseignement/python_scripts/cours_dictionnaires";
+            },},{id: "teachings-python-fonctions",
+          title: 'Python - Fonctions',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/enseignement/python_scripts/cours_fonctions";
+            },},{id: "teachings-python-formatage",
+          title: 'Python - Formatage',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/enseignement/python_scripts/cours_formatages";
+            },},{id: "teachings-python-imports",
+          title: 'Python - Imports',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/enseignement/python_scripts/cours_imports";
+            },},{id: "teachings-python-listes",
+          title: 'Python - Listes',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/enseignement/python_scripts/cours_listes";
+            },},{id: "teachings-python-numpy",
+          title: 'Python - Numpy',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/enseignement/python_scripts/cours_numpy";
+            },},{id: "teachings-python-opérateurs",
+          title: 'Python - Opérateurs',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/enseignement/python_scripts/cours_operateurs";
+            },},{id: "teachings-python-structures",
+          title: 'Python - Structures',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/enseignement/python_scripts/cours_structures";
+            },},{id: "teachings-python-types-basiques",
+          title: 'Python - Types basiques',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/enseignement/python_scripts/cours_types_basiques";
+            },},{id: "teachings-python-types-basiques",
+          title: 'Python - Types basiques',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/enseignement/python_scripts/demo_matplotlib";
+            },},{id: "teachings-python-scéance-1",
+          title: 'Python - Scéance 1',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/enseignement/sceance1";
+            },},{id: "teachings-python-scéance-2",
+          title: 'Python - Scéance 2',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/enseignement/sceance2";
+            },},{
+      id: 'light-theme',
+      title: 'Change theme to light',
+      description: 'Change the theme of the site to Light',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("light");
+      },
+    },
+    {
+      id: 'dark-theme',
+      title: 'Change theme to dark',
+      description: 'Change the theme of the site to Dark',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("dark");
+      },
+    },
+    {
+      id: 'system-theme',
+      title: 'Use system default theme',
+      description: 'Change the theme of the site to System Default',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("system");
+      },
+    },];
+
+</script> <script src="/assets/al_search/js/shortcut-key.js"></script> </body> </html>

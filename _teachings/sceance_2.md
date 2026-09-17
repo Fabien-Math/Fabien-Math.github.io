@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Python - Scéance 2
-permalink: /enseignement/
+permalink: /enseignement/sceance2
 ---
 
 

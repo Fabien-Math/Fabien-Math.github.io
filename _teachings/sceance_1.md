@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Python - Scéance 1
-permalink: /enseignement/
 ---
 
 # Python

@@ -1,3 +1,11 @@
+---
+layout: course
+title: Python Fundamentals - Scéance 1
+year: 2026
+course_id: python-fundamentals-1
+---
+
+
 # Python
 
 ## L'Histoire de Python

@@ -6,10 +6,8 @@ toc:
   sidebar: left
 ---
 
-# Les fonctions en python
 
-
-#### Fonction simple
+## Fonction simple
 ```python
 def dire_bonjour():
     print("bonjour !")
@@ -18,7 +16,7 @@ dire_bonjour()
 ```
 
 
-#### Fonction avec parametre
+## Fonction avec parametre
 ```python
 
 def dire_bonjour_a(nom):
@@ -29,7 +27,7 @@ dire_bonjour_a("bob")
 ```
 
 
-#### Fonction avec plusieurs parametres
+## Fonction avec plusieurs parametres
 ```python
 
 def additionner(a, b):
@@ -39,7 +37,7 @@ additionner(10, 5)
 ```
 
 
-#### Fonction avec return
+## Fonction avec return
 ```python
 
 def additionner(a, b):
@@ -52,7 +50,7 @@ print("resultat :", resultat)
 
 
 
-#### Plusieurs valeurs
+## Plusieurs valeurs
 ```python
 
 def calculer(a, b):
@@ -66,7 +64,7 @@ print("somme :", somme)
 print("produit :", produit)
 ```
 
-#### Parametre par defaut
+## Parametre par defaut
 ```python
 
 def saluer(nom="ami"):
@@ -77,7 +75,7 @@ saluer("alice")
 ```
 
 
-#### Arguments nommes 
+## Arguments nommes 
 ```python
 
 def presenter(nom, age):
@@ -87,7 +85,7 @@ def presenter(nom, age):
 presenter(age=20, nom="alice")
 ```
 
-#### *args 
+## *args 
 ```python
 
 def additionner_tout(*nombres):
@@ -103,7 +101,7 @@ print(additionner_tout(10, 20, 30, 40))
 ```
 
 
-#### **kwargs 
+## **kwargs 
 ```python
 
 def afficher_infos(**infos):
@@ -118,7 +116,7 @@ afficher_infos(
 ```
 
 
-#### Fonction lambda 
+## Fonction lambda 
 ```python
 
 carre = lambda x: x ** 2
@@ -127,7 +125,7 @@ print("carre de 5 :", carre(5))
 ```
 
 
-#### Fonction dans une fonction 
+## Fonction dans une fonction 
 ```python
 
 def fonction_exterieure():
@@ -141,7 +139,7 @@ fonction_exterieure()
 ```
 
 
-#### Portee des variables 
+## Portee des variables 
 ```python
 
 variable_globale = "je suis globale"
@@ -155,7 +153,7 @@ def tester_portee():
 tester_portee()
 ```
 
-#### Fonction recursive 
+## Fonction recursive 
 ```python
 
 def factorielle(n):
@@ -168,7 +166,7 @@ def factorielle(n):
 print("factorielle de 5 :", factorielle(5))
 ```
 
-#### Fonction comme argument 
+## Fonction comme argument 
 ```python
 
 def executer(fonction, valeur):

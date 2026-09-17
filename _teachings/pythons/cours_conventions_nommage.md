@@ -1,31 +1,26 @@
 ---
 layout: page
 title: Python - Convention de nommage
-permalink: /enseignement/python_scripts/convention_nommage
+permalink: /enseignement/python_scripts/conventions_nommage
 ---
 
 
+## CONVENTIONS DE NOMMAGE EN PYTHON
 
-```python
-"""
-CONVENTIONS DE NOMMAGE EN PYTHON
-
-Python utilise principalement la convention PEP 8 pour le nommage.
+Python utilise principalement la convention *PEP 8* pour le nommage.
 
 À retenir :
 
-    variable       -> snake_case
-    fonction       -> snake_case()
-    constante      -> MAJUSCULES_AVEC_UNDERSCORE
+- **variable**  -> **snake_case**
+- **fonction**  -> **snake_case()**
+- **constante** -> **MAJUSCULES_AVEC_UNDERSCORE**
 
-IMPORTANT !!!
+### IMPORTANT !!!
 
-Toujours utiliser des NOMS DE VARIABLES DESCRIPTIFS :
-ils doivent permettre de comprendre facilement
-ce que contient la variable.
-"""
+Toujours utiliser des **NOMS DE VARIABLES DESCRIPTIFS** : ils doivent permettre de comprendre facilement ce que contient la variable.
 
 
+```python
 # Questions
 Prenom = "Bob"
 prenoms = "Bob"

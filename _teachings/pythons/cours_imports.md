@@ -6,7 +6,8 @@ toc:
   sidebar: right
 ---
 
-# Les imports en python
+[Fichier brut](cours_imports.py)
+
 
 #### Importer un module entier
 ```python

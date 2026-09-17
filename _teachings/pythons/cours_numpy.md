@@ -6,6 +6,9 @@ toc:
   sidebar: right
 ---
 
+[Fichier brut](cours_numpy.py)
+
+
 ```python
 import numpy as np
 ```

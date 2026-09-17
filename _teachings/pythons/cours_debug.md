@@ -6,6 +6,7 @@ toc:
   sidebar: right
 ---
 
+[Fichier brut](cours_debug.py)
 
 ```python
 # Exemple

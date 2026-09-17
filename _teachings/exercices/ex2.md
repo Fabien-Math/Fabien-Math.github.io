@@ -6,6 +6,7 @@ toc:
   sidebar: right
 ---
 
+
 ## Création du dictionnaire
 
 Créer un dictionnaire `inventaire` contenant les produits suivants :

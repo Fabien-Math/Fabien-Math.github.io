@@ -6,6 +6,8 @@ toc:
   sidebar: right
 ---
 
+[Fichier brut](cours_fonctions.py)
+
 
 ## Fonction simple
 ```python

@@ -6,6 +6,7 @@ toc:
   sidebar: right
 ---
 
+[Fichier brut](demo_matplotlib.py)
 
 ```python
 import numpy as np

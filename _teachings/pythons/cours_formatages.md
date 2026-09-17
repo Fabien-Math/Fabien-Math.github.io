@@ -6,8 +6,10 @@ toc:
   sidebar: right
 ---
 
+[Fichier brut](cours_formatages.py)
 
-# Demonstration des f-strings en Python
+
+## Demonstration des f-strings en Python
 
 ```python
 nom = "Alice"

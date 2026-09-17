@@ -6,6 +6,8 @@ toc:
   sidebar: right
 ---
 
+[Fichier brut](cours_structures.py)
+
 
 ## Conditions : if / else
 ```python

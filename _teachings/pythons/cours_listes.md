@@ -6,8 +6,7 @@ toc:
   sidebar: right
 ---
 
-
-# Les listes en python
+[Fichier brut](cours_listes.py)
 
 ## Creation d'une liste
 ```python

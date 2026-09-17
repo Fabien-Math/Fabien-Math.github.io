@@ -3,7 +3,7 @@ layout: page
 title: Python - Convention de nommage
 permalink: /enseignement/python_scripts/conventions_nommage
 ---
-
+[Fichier brut](cours_conventions_nommage.py)
 
 ## CONVENTIONS DE NOMMAGE EN PYTHON
 

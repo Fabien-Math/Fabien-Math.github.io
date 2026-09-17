@@ -2,11 +2,13 @@
 layout: page
 title: Python - Dictionnaires
 permalink: /enseignement/python_scripts/cours_dictionnaires
+toc:
+  sidebar: right
 ---
 
-## Les dictionnaires en python
+[Fichier brut](cours_dictionnaires.py)
 
-##### Creation d'un dictionnaire
+## Creation d'un dictionnaire
 
 ```python
 print("Creation d'un dictionnaire")
@@ -19,7 +21,7 @@ print("Dictionnaire :", personne)
 input()
 ```
 
-##### Acceder aux valeurs
+## Acceder aux valeurs
 ```python
 print("Acceder aux valeurs")
 print("Nom :", personne["nom"])
@@ -28,7 +30,7 @@ print("Ville :", personne["ville"])
 input()
 ```
 
-##### Modifier une valeur
+## Modifier une valeur
 ```python
 print("Modifier une valeur")
 print("Avant modification :", personne)
@@ -39,7 +41,7 @@ print("Apres modification :", personne)
 input()
 ```
 
-##### Ajouter une nouvelle valeur
+## Ajouter une nouvelle valeur
 ```python
 print("Ajouter une nouvelle valeur")
 print("Avant ajout :", personne)
@@ -50,14 +52,14 @@ print("Apres ajout :", personne)
 input()
 ```
 
-##### Taille du dictionnaire
+## Taille du dictionnaire
 ```python
 print("Taille du dictionnaire")
 print("Nombre d'elements :", len(personne))
 input()
 ```
 
-##### Verifier si une cle existe
+## Verifier si une cle existe
 ```python
 print("Verifier si une cle existe")
 print("nom" in personne)
@@ -65,7 +67,7 @@ print("email" in personne)
 input()
 ```
 
-##### Obtenir une valeur avec get()
+## Obtenir une valeur avec get()
 ```python
 print("Obtenir une valeur avec get()")
 print("Nom :", personne.get("nom"))
@@ -74,7 +76,7 @@ print("Email :", personne.get("email", "nom.prenom@mail.fr"))
 input()
 ```
 
-##### Parcourir les cles
+## Parcourir les cles
 ```python
 print("Parcourir les cles")
 print("Cles du dictionnaire :")
@@ -85,7 +87,7 @@ for cle in personne:
 input()
 ```
 
-##### Parcourir les valeurs
+## Parcourir les valeurs
 ```python
 print("Parcourir les valeurs")
 print("Valeurs du dictionnaire :")
@@ -96,7 +98,7 @@ for valeur in personne.values():
 input()
 ```
 
-##### Parcourir les cles et les valeurs
+## Parcourir les cles et les valeurs
 ```python
 print("Parcourir les cles et les valeurs")
 print("Cles et valeurs :")
@@ -107,7 +109,7 @@ for cle, valeur in personne.items():
 input()
 ```
 
-##### Supprimer un element
+## Supprimer un element
 ```python
 print("Supprimer un element")
 print("Avant suppression :", personne)
@@ -118,7 +120,7 @@ print("Apres suppression :", personne)
 input()
 ```
 
-##### Supprimer avec pop()
+## Supprimer avec pop()
 ```python
 print("Supprimer avec pop()")
 personne["ville"] = "Toulon" # Cette ligne reintroduit la cle "ville" avec la valeur "Toulon"
@@ -131,7 +133,7 @@ print("Apres pop() :", personne)
 input()
 ```
 
-##### Vider le dictionnaire
+## Vider le dictionnaire
 ```python
 print("Vider le dictionnaire")
 personne.clear()
@@ -140,7 +142,7 @@ print("Dictionnaire apres clear() :", personne)
 input()
 ```
 
-##### QUESTION
+## QUESTION
 ```python
 print("QUESTION")
 personne = {
@@ -162,7 +164,7 @@ print("La liste personne a change, pourquoi ?")
 
 ### Maniere de creer des dictionnaires en python
 
-##### Creation d'un dictionnaire classique
+## Creation d'un dictionnaire classique
 ```python
 print("Creation d'un dictionnaire classique")
 personne = {
@@ -174,7 +176,7 @@ print(personne)
 input()
 ```
 
-##### Creation d'un dictionnaire vide (Initialisation)
+## Creation d'un dictionnaire vide (Initialisation)
 ```python
 print("Creation d'un dictionnaire vide (Initialisation)")
 personne = {}
@@ -182,7 +184,7 @@ print(personne)
 input()
 ```
 
-##### Creation d'un dictionnaire avec dict
+## Creation d'un dictionnaire avec dict
 ```python
 print("Creation d'un dictionnaire avec dict")
 personne = dict(
@@ -194,7 +196,7 @@ print(personne)
 input()
 ```
 
-##### Creation d'un dictionnaire a partir d'une liste de tuples
+## Creation d'un dictionnaire a partir d'une liste de tuples
 ```python
 print("Creation d'un dictionnaire a partir d'une liste de tuples")
 donnees = [
@@ -208,7 +210,7 @@ print(personne)
 input()
 ```
 
-##### Creation d'un dictionnaire avec des cles et des valeurs
+## Creation d'un dictionnaire avec des cles et des valeurs
 ```python
 print("Creation d'un dictionnaire avec des cles et des valeurs")
 cles = ["nom", "age", "ville"]
@@ -219,7 +221,7 @@ print(personne)
 input()
 ```
 
-##### Creation d'un dictionnaire avec une comprehension
+## Creation d'un dictionnaire avec une comprehension
 ```python
 print("Creation d'un dictionnaire avec une comprehension")
 carres = {
@@ -230,7 +232,7 @@ print(carres)
 input()
 ```
 
-##### Creation d'un dictionnaire avec une condition
+## Creation d'un dictionnaire avec une condition
 ```python
 print("Creation d'un dictionnaire avec une condition")
 pairs = {
@@ -242,7 +244,7 @@ print(pairs)
 input()
 ```
 
-##### Creation d'un dictionnaire a partir d'une liste
+## Creation d'un dictionnaire a partir d'une liste
 ```python
 print("Creation d'un dictionnaire a partir d'une liste")
 nombres = [1, 2, 3, 4, 5]
@@ -255,7 +257,7 @@ print(carres)
 input()
 ```
 
-##### Creation d'un dictionnaire avec une fonction
+## Creation d'un dictionnaire avec une fonction
 ```python
 print("Creation d'un dictionnaire avec une fonction")
 def foo(x):
@@ -272,7 +274,7 @@ print(resultat)
 input()
 ```
 
-##### Creation d'un dictionnaire imbrique
+## Creation d'un dictionnaire imbrique
 ```python
 print("Creation d'un dictionnaire imbrique")
 personne = {
@@ -288,7 +290,7 @@ print(personne)
 input()
 ```
 
-##### Creation d'un dictionnaire contenant des listes
+## Creation d'un dictionnaire contenant des listes
 ```python
 print("Creation d'un dictionnaire contenant des listes")
 classe = {
@@ -301,7 +303,7 @@ print(classe)
 input()
 ```
 
-##### Copie d'un dictionnaire
+## Copie d'un dictionnaire
 ```python
 print("Copie d'un dictionnaire")
 personne = {
@@ -316,7 +318,7 @@ print(copie)
 input()
 ```
 
-##### Creation d'un dictionnaire avec des valeurs identiques
+## Creation d'un dictionnaire avec des valeurs identiques
 ```python
 print("Creation d'un dictionnaire avec des valeurs identiques")
 cles = ["a", "b", "c", "d"]

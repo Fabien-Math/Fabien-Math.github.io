@@ -105,6 +105,8 @@ if __name__ == "__main__":
 ### Exercice 1
 
 [Exercice 1](/enseignement/python/ex1)
+
+
 [Correction](exercices/ex1_correction.py)
 
 

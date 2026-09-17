@@ -55,6 +55,8 @@ Python
 
 ## Les dictionnaires
 [Cours dictionnaires](/enseignement/python_scripts/cours_dictionnaires)
+
+
 [Exercice sur les dictionnaires](/enseignement/python/ex2)
 
 ## Les imports de modules

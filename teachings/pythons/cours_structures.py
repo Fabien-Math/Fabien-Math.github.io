@@ -1,0 +1,94 @@
+# Les structures en Python
+
+# Conditions : if / else
+nombre = 10
+print("Nombre :", nombre)
+if nombre > 0:
+    print("Le nombre est positif")
+else:
+    print("Le nombre est négatif ou nul")
+input()
+
+
+
+
+
+
+
+
+
+
+
+
+note = 14
+print("\nNote :", note)
+if note >= 16:
+    print("Mention Très bien")
+elif note >= 10:
+    print("Validé")
+elif note >= 10 and not note%2:
+    print("Validé pair")
+else:
+    print("Non validé")
+input()
+
+
+
+
+
+
+
+
+
+
+
+
+# Boucle for
+print("\nBoucle for :")
+for i in range(5):
+    print("i =", i)
+
+nombres = [10, 20, 30, 40]
+print("\nParcours de la liste :")
+for nombre in nombres:
+    print(nombre)
+input()
+
+
+
+
+
+
+
+
+
+
+
+
+# Boucle while
+print("\nBoucle while :")
+x = 0
+while x < 5:
+    print("x =", x)
+    x = x + 1
+input()
+
+
+
+
+
+
+
+
+
+
+
+
+# Debug
+print("\nObserver l'exécution :")
+x = 0
+while x < 3:
+    print("DEBUG - début : x =", x)
+    x = x + 1
+    print("DEBUG - fin   : x =", x)
+

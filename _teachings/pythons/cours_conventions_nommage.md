@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Python - Convention de nommage
-permalink: /enseignement/python_scripts/conventions_nommage
+permalink: /enseignement/python_scripts/cours_conventions_nommage
 ---
 [Fichier brut](cours_conventions_nommage.py)
 

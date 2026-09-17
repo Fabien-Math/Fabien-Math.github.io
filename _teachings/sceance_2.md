@@ -77,4 +77,4 @@ Python
 
 ## Suite du TP
 
-[TP](../TP.md)
+[TP](/enseignement/TP.md)

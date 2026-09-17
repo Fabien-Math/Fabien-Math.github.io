@@ -102,7 +102,10 @@
 } /* Literal.Number.Integer */
 .highlight .mo {
   color: #009999;
-} /* Literal.Number.Oct */ /* Literal.String.Backtick */
+} /* Literal.Number.Oct */
+.highlight .sb {
+  color: #d01040;
+} /* Literal.String.Backtick */
 .highlight .sc {
   color: #d01040;
 } /* Literal.String.Char */ /* Literal.String.Doc */ /* Literal.String.Double */

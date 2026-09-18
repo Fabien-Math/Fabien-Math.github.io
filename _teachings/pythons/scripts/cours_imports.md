@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Python - Imports
-permalink: /enseignement/python_scripts/cours_imports
+permalink: /enseignement/python/scripts/cours_imports
 toc:
   sidebar: right
 ---

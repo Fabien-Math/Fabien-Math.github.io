@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Python - Outils de debug
-permalink: /enseignement/python_scripts/cours_debug
+permalink: /enseignement/python/scripts/cours_debug
 toc:
   sidebar: right
 ---

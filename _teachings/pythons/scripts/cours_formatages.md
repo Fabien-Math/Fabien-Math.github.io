@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Python - Formatage
-permalink: /enseignement/python_scripts/cours_formatages
+permalink: /enseignement/python/scripts/cours_formatages
 toc:
   sidebar: right
 ---

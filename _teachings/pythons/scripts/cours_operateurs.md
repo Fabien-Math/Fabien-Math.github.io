@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Python - Opérateurs
-permalink: /enseignement/python_scripts/cours_operateurs
+permalink: /enseignement/python/scripts/cours_operateurs
 toc:
   sidebar: right
 ---

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Python - Types basiques
-permalink: /enseignement/python_scripts/cours_types_basiques
+permalink: /enseignement/python/scripts/cours_types_basiques
 toc:
   sidebar: right
 ---

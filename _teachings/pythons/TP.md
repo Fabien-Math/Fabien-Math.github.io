@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Python - TP
-permalink: /enseignement/TP1
+permalink: /enseignement/python/TP1
 toc:
   sidebar: right
 ---

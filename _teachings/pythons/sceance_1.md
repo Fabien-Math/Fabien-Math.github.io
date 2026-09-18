@@ -50,28 +50,28 @@ Python
 ```
 
 ## Les types de données en Python
-[Cours types de données](/enseignement/python_scripts/cours_types_basiques)
+[Cours types de données](/enseignement/python/scripts/cours_types_basiques)
 
 ## Les operateurs en Python
-[Cours opérateurs](/enseignement/python_scripts/cours_operateurs)
+[Cours opérateurs](/enseignement/python/scripts/cours_operateurs)
 
 ## Les conditions et boucles
-[Cours structures](/enseignement/python_scripts/cours_structures)
+[Cours structures](/enseignement/python/scripts/cours_structures)
 
 ## Les listes
-[Cours listes](/enseignement/python_scripts/cours_listes)
+[Cours listes](/enseignement/python/scripts/cours_listes)
 
 ## Les fonctions
-[Cours fonctions](/enseignement/python_scripts/cours_fonctions)
+[Cours fonctions](/enseignement/python/scripts/cours_fonctions)
 
 ## Formatages
-[Cours formatages](/enseignement/python_scripts/cours_formatages)
+[Cours formatages](/enseignement/python/scripts/cours_formatages)
 
 ## Debug
-[Cours debug](/enseignement/python_scripts/cours_debug)
+[Cours debug](/enseignement/python/scripts/cours_debug)
 
 ## Convention de nommage
-[Cours convention de nommage](/enseignement/python_scripts/cours_conventions_nommage)
+[Cours convention de nommage](/enseignement/python/scripts/cours_conventions_nommage)
 
 
 ## Un premier programme

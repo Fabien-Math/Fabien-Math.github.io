@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Python - Types basiques
-permalink: /enseignement/python_scripts/demo_matplotlib
+permalink: /enseignement/python/scripts/demo_matplotlib
 toc:
   sidebar: right
 ---

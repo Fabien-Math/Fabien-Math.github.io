@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Python - Dictionnaires
-permalink: /enseignement/python_scripts/cours_dictionnaires
+permalink: /enseignement/python/scripts/cours_dictionnaires
 toc:
   sidebar: right
 ---

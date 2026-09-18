@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Python - Listes
-permalink: /enseignement/python_scripts/cours_listes
+permalink: /enseignement/python/scripts/cours_listes
 toc:
   sidebar: right
 ---

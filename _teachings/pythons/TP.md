@@ -6,6 +6,8 @@ toc:
   sidebar: right
 ---
 
+[Commentaires et correction](/assets/codes/python/exercices/commantaires_general.py)
+
 ## Objectif
 
 Programmer un robot virtuel capable de se déplacer dans le plan et visualiser ses trajectoires.

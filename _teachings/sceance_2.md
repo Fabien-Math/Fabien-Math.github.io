@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Python - Scéance 2
-permalink: /enseignement/sceance2
+permalink: /enseignement/python/sceance2
 toc:
   sidebar: right
 ---
@@ -79,4 +79,4 @@ Python
 
 ## Suite du TP
 
-[TP](/enseignement/TP1)
+[TP](/enseignement/python/TP1)

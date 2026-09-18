@@ -6,7 +6,7 @@ toc:
   sidebar: right
 ---
 
-[Fichier brut](cours_debug.py)
+[Fichier brut](/assets/codes/python/cours_debug.py)
 
 ```python
 # Exemple

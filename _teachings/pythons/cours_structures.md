@@ -6,7 +6,7 @@ toc:
   sidebar: right
 ---
 
-[Fichier brut](cours_structures.py)
+[Fichier brut](/assets/codes/python/cours_structures.py)
 
 
 ## Conditions : if / else

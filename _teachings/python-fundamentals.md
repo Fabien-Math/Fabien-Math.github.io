@@ -6,26 +6,26 @@ course_id: python-fundamentals
 ---
 
 ## Scéance 1
-[Scéance 1](/enseignement/sceance1) 
+[Scéance 1](/enseignement/python/sceance1) 
 
 ## Scéance 2
-[Scéance 2](/enseignement/sceance2)
+[Scéance 2](/enseignement/python/sceance2)
 
 
 ## TP
-[Sujet du TP](/enseignement/TP1)
+[Sujet du TP](/enseignement/python/TP1)
 
 ## Cheatsheets
-[Data types](/enseignement/cheatsheets/data_types)
+[Data types](/enseignement/cheatsheets/python/data_types)
 
-[Operators](/enseignement/cheatsheets/operators) 
+[Operators](/enseignement/cheatsheets/python/operators) 
 
-[Conditions, loops and exceptions](/enseignement/cheatsheets/control_flow) 
+[Conditions, loops and exceptions](/enseignement/cheatsheets/python/control_flow) 
 
-[Instructions](/enseignement/cheatsheets/instructions) 
+[Instructions](/enseignement/cheatsheets/python/instructions) 
 
-[Functions](/enseignement/cheatsheets/functions) 
+[Functions](/enseignement/cheatsheets/python/functions) 
 
-[MatPlotLib](/enseignement/cheatsheets/matplotlib) 
+[MatPlotLib](/enseignement/cheatsheets/python/matplotlib) 
 
-[NumPy](/enseignement/cheatsheets/numpy) 
+[NumPy](/enseignement/cheatsheets/python/numpy) 

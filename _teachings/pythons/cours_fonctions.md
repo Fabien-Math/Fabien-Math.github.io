@@ -6,7 +6,7 @@ toc:
   sidebar: right
 ---
 
-[Fichier brut](cours_fonctions.py)
+[Fichier brut](/assets/codes/python/cours_fonctions.py)
 
 
 ## Fonction simple

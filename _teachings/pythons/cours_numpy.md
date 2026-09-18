@@ -6,7 +6,7 @@ toc:
   sidebar: right
 ---
 
-[Fichier brut](cours_numpy.py)
+[Fichier brut](/assets/codes/python/cours_numpy.py)
 
 
 ```python

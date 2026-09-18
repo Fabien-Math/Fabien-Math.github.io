@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Python — Data types
-permalink: /enseignement/cheatsheets/data_types
+permalink: /enseignement/cheatsheets/python/data_types
 toc:
   sidebar: right
 ---

@@ -6,7 +6,7 @@ toc:
   sidebar: right
 ---
 
-[Fichier brut](cours_imports.py)
+[Fichier brut](/assets/codes/python/cours_imports.py)
 
 
 #### Importer un module entier

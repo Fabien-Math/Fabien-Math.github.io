@@ -6,7 +6,7 @@ toc:
   sidebar: right
 ---
 
-[Fichier brut](cours_types_basiques.py)
+[Fichier brut](/assets/codes/python/cours_types_basiques.py)
 
 ## Entier — `int`
 ```python

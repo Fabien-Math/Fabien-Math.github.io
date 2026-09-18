@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Python — NumPy
-permalink: /enseignement/cheatsheets/numpy
+permalink: /enseignement/cheatsheets/python/numpy
 toc:
   sidebar: right
 ---

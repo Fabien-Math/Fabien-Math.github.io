@@ -46,3 +46,7 @@ import random
 3. Afficher tous les produits du panier.
 4. Afficher le produit le plus cher du panier.
 5. Demander la quantité lorsqu'un produit est ajouté au panier.
+
+
+
+[Correction](/assets/codes/python/exercices/ex1_correction.py)

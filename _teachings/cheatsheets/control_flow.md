@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Python — Conditions, loops and exceptions
-permalink: /enseignement/cheatsheets/control_flow
+permalink: /enseignement/cheatsheets/python/control_flow
 toc:
   sidebar: right
 ---

@@ -6,7 +6,7 @@ toc:
   sidebar: right
 ---
 
-[Fichier brut](cours_operateurs.py)
+[Fichier brut](/assets/codes/python/cours_operateurs.py)
 
 
 ## Operateurs arithmetiques

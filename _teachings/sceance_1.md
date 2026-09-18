@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Python - Scéance 1
-permalink: /enseignement/sceance1
+permalink: /enseignement/python/sceance1
 toc:
   sidebar: right
 ---
@@ -107,9 +107,8 @@ if __name__ == "__main__":
 [Exercice 1](/enseignement/python/ex1)
 
 
-[Correction](exercices/ex1_correction.py)
-
+[Correction](/assets/codes/python/exercices/ex1_correction.py)
 
 ## Début du TP
 
-[TP](/enseignement/TP1)
+[TP](/enseignement/python/TP1)

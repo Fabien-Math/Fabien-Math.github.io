@@ -6,7 +6,7 @@ toc:
   sidebar: right
 ---
 
-[Fichier brut](cours_dictionnaires.py)
+[Fichier brut](/assets/codes/python/cours_dictionnaires.py)
 
 ## Creation d'un dictionnaire
 

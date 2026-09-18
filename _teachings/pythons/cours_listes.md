@@ -6,7 +6,7 @@ toc:
   sidebar: right
 ---
 
-[Fichier brut](cours_listes.py)
+[Fichier brut](/assets/codes/python/cours_listes.py)
 
 ## Creation d'une liste
 ```python

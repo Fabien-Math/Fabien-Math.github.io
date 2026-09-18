@@ -6,7 +6,7 @@ toc:
   sidebar: right
 ---
 
-[Fichier brut](cours_formatages.py)
+[Fichier brut](/assets/codes/python/cours_formatages.py)
 
 
 ## Demonstration des f-strings en Python

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Python — Keywords and instructions
-permalink: /enseignement/cheatsheets/instructions
+permalink: /enseignement/cheatsheets/python/instructions
 toc:
   sidebar: right
 ---

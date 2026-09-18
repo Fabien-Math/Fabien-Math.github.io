@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Python — Main fonctions
-permalink: /enseignement/cheatsheets/functions
+permalink: /enseignement/cheatsheets/python/functions
 toc:
   sidebar: right
 ---

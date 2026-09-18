@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Python — Operators
-permalink: /enseignement/cheatsheets/operators
+permalink: /enseignement/cheatsheets/python/operators
 toc:
   sidebar: right
 ---

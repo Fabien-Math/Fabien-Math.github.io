@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Python — MatPlotLib
-permalink: /enseignement/cheatsheets/matplotlib
+permalink: /enseignement/cheatsheets/python/matplotlib
 toc:
   sidebar: right
 ---

@@ -14,8 +14,8 @@ course_id: python-fundamentals
 ## Scéance 3
 [Scéance 3](/enseignement/python/sceance3)
 
-## Scéance 3
-[Scéance 4](/enseignement/python/sceance3)
+## Scéance 4
+[Scéance 4](/enseignement/python/sceance4)
 
 ## Exercice noté
 [Exercice](/enseignement/python/tp_note)

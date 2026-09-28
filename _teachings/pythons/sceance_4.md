@@ -93,7 +93,7 @@ u
 $$
 
 
-## Dimensions des variables
+### Dimensions des variables
 
 Dans notre simulation :
 
@@ -124,7 +124,7 @@ dX = [[dx],
 Il est important de conserver ces dimensions pendant toute la simulation.
 
 
-# 2. Le modèle dynamique
+## 2. Le modèle dynamique
 
 Le rôle de la fonction `model` est de calculer la dérivée de l'état.
 
@@ -164,7 +164,7 @@ def model(X, U):
     return np.array([[dx], [dv]])
 ```
 
-## Vérification (N'oubliez pas de tester !)
+### Vérification (N'oubliez pas de tester !)
 
 On peut tester le modèle avec :
 
@@ -198,7 +198,7 @@ print(dX)
 ```
 
 
-## Exercice 1
+### Exercice 1
 
 Modifier les valeurs de `X` et `U`.
 
@@ -223,7 +223,7 @@ U = np.array([[4]])
 
 
 
-# 3. La fonction de mesure
+## 3. La fonction de mesure
 
 Le système possède deux états :
 
@@ -284,7 +284,7 @@ Y = [[x]]
 Donc `X` est de taille `(2, 1)` alors que `Y` est de taille `(1, 1)`.
 
 
-# 4. Intégration d'Euler explicite
+## 4. Intégration d'Euler explicite
 
 
 Le modèle donne une dérivée :
@@ -376,7 +376,7 @@ print(X)
 ```
 
 
-# 5. Première boucle de simulation
+## 5. Première boucle de simulation
 
 Nous allons maintenant simuler le système.
 
@@ -414,7 +414,7 @@ U = np.array([[1]])
 ```
 
 
-## Boucle de simulation
+### Boucle de simulation
 
 À chaque instant :
 
@@ -430,7 +430,7 @@ for t in times:
 print(X)
 ```
 
-# 6. Stockage des résultats
+## 6. Stockage des résultats
 
 À la fin de la simulation, nous ne possédons que l'état final.
 
@@ -487,7 +487,7 @@ plt.legend()
 plt.show()
 ```
 
-# 7. Ajouter la mesure
+## 7. Ajouter la mesure
 
 Nous allons maintenant utiliser `h(X)` dans la boucle.
 
@@ -517,7 +517,7 @@ for t in times:
     Y_vec = np.hstack((Y_vec, Y))
 ```
 
-# 8. Ajouter une commande
+## 8. Ajouter une commande
 
 Jusqu'ici, l'accélération était imposée :
 
@@ -552,7 +552,7 @@ x \rightarrow x_d
 $$
 
 
-# 9. Fonction de guidance
+## 9. Fonction de guidance
 
 Dans une architecture de commande, on peut séparer :
 
@@ -610,7 +610,7 @@ Le terme $K_p e$ pousse le système vers la consigne.
 
 Le terme $-K_dv$ permet de tenir compte de la vitesse du système.
 
-# 10. Fonction de contrôle
+## 10. Fonction de contrôle
 
 La fonction `ctrl` transforme la référence de commande `ud` en commande du système `U`.
 
@@ -631,7 +631,7 @@ def ctrl(X, ud):
 ```
 
 
-# 11. Boucle de simulation avec commande
+## 11. Boucle de simulation avec commande
 
 Nous avons maintenant toutes les fonctions nécessaires.
 
@@ -687,7 +687,7 @@ for t in times:
     Y_d_vec = np.hstack((Y_d_vec, Y_d))
 ```
 
-# 12. Visualisation des résultats
+## 12. Visualisation des résultats
 
 Nous pouvons maintenant afficher :
 
@@ -732,7 +732,7 @@ plt.legend()
 plt.show()
 ```
 
-# 13. Comparer plusieurs contrôleurs
+## 13. Comparer plusieurs contrôleurs
 
 Nous allons maintenant faire plusieurs simulations.
 

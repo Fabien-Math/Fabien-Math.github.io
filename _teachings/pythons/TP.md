@@ -6,7 +6,9 @@ toc:
   sidebar: right
 ---
 
-[Commentaires et correction](/assets/codes/python/exercices/commantaires_general.py)
+[Commentaires et correction](/assets/codes/python/exercices/commantaire_general.py)
+
+[Performance test](/assets/codes/python/exercices/perf_test.py)
 
 ## Objectif
 
@@ -65,45 +67,41 @@ Visualisation simple avec Matplotlib.
 
 ### Niveau 12
 
-Visualisation en temps réel simple avec Matplotlib.
+Passage à NumPy.
 
 ### Niveau 13
 
-Passage à NumPy.
+Simulation de plusieurs robot et affichage comparatif. Chaque robot a sa mission.
 
 ### Niveau 14
 
-Simulation de plusieurs robot et affichage comparatif. Chaque robot a sa mission.
+Ajouter des obstacles à l'environnement.
 
 ### Niveau 15
 
-Ajouter des obstacles à l'environnement.
-
-### Niveau 16
-
 Créer une fonction permettant de calculer la distance entre le robot et un obstacle.
 
-### Niveau 17
+### Niveau 16
 
 Détecter les collisions avec les obstacles.
 Si une collision est détectée, générer un mouvement aléatoire (ou non) pour débloquer le robot
 
-### Niveau 18
+### Niveau 17
 
 Déplacements autonomes de point en point avec des obstacles sans plannification (le robot ne connaît pas la carte du monde).
 
-### Niveau 19
+### Niveau 18
 
 Définir une distance minimale de sécurité autour du robot (détection dans un rayon de 50 cm).
 
-### Niveau 20
+### Niveau 19
 
 Ajouter un modèle au robot
 
 Le robot possède deux roues motrices placées sur un même axe, symétriquement par rapport au centre du robot.
 Chaque roue est située à `r = 0.20` m du centre. L'entraxe entre les deux roues est donc de `d = 40` cm
 
-### Niveau 21
+### Niveau 20
 
 Créer un système simple d'évitement d'obstacle.
 
@@ -113,7 +111,7 @@ Lorsque le robot détecte un obstacle :
 
 Le système n'a pas besoin de trouver la trajectoire optimale.
 
-### Niveau 22
+### Niveau 21
 
 Comparer plusieurs trajectoires possibles.
 

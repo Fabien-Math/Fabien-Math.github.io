@@ -1,0 +1,425 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> Python - Scéance 4 | Fabien's website </title> <meta name="author" content="Fabien M"> <meta name="description" content="A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design. "> <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website"> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
+  :root {
+    --max-content-width: 1600px;
+  }
+</style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tocbot@4.36.4/dist/tocbot.css" integrity="sha256-zTN0r+0OKaIv2xqeNNIYxNk0pWJ6+IqPGc1iDgVzWF0=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?v=3116ba77db9ee1581d05bb3e86fbf7f1"> <link rel="canonical" href="https://fabien-math.github.io/enseignement/python/sceance4"> <script src="/assets/js/theme.js?v=5286c3e4c334d0ecb8fc0c40ff4fa7ec"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+    initTheme();
+  </script> </head> <body class="fixed-top-nav sticky-bottom-footer"> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> Fabien's website </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">About </a> </li> <li class="nav-item "> <a class="nav-link" href="/teaching/">Enseignement </a> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="row"> <div class="col-sm-9"> <div class="post"> <header class="post-header"> <h1 class="post-title">Python - Scéance 4</h1> <p class="post-description"></p> </header> <article> <h1 id="simulation-et-commande-dun-système-dynamique">Simulation et commande d’un système dynamique</h1> <h2 id="objectifs">Objectifs</h2> <ul> <li>définir un système dynamique sous forme d’état ;</li> <li>créer une fonction <code class="language-plaintext highlighter-rouge">model(X, U)</code> ;</li> <li>définir une fonction de mesure <code class="language-plaintext highlighter-rouge">h(X)</code> ;</li> <li>intégrer un système dynamique avec Euler ;</li> <li>construire une boucle de simulation ;</li> <li>définir une fonction de guidage ;</li> <li>définir une fonction de commande ;</li> <li>stocker les résultats d’une simulation ;</li> <li>représenter les résultats ;</li> <li>comparer plusieurs simulations.</li> </ul> <p>L’architecture générale d’une simulation est :</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Consigne -&gt; Guidance -&gt; Contrôleur -&gt; U -&gt; Modèle -&gt; dX -&gt; Euler -&gt; X -&gt; h -&gt; Y -&gt; Sauvegarde
+</code></pre></div></div> <h2 id="petit-mot">Petit mot…</h2> <h3 id="convention-de-notation-">Convention de notation :</h3> <p>les variables représentant des vecteurs ou matrices du modèle (X, U, Y) utilisent des majuscules afin de rester cohérentes avec les notations mathématiques du cours. Les noms des variables scalaires sont écrits en snake_case.</p> <h2 id="1-le-système-dynamique">1. Le système dynamique</h2> <p>On considère une masse qui se déplace sur une ligne.</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        x
+    ─────────────●──────────────────►
+                masse
+</code></pre></div></div> <p>L’état du système est :</p> \[X = \begin{bmatrix} x \\ v \end{bmatrix}\] <p>avec :</p> <ul> <li>$x$ : position [m]</li> <li>$v$ : vitesse [m/s]</li> </ul> <p>La commande est :</p> \[U = \begin{bmatrix} u \end{bmatrix}\] <p>où $u$ est l’accélération [m/s²].</p> <p>Le système dynamique est :</p> \[\dot{x} = v\] \[\dot{v} = u\] <p>On peut donc écrire :</p> \[\dot{X} = \begin{bmatrix} \dot{x} \\ \dot{v} \end{bmatrix} = \begin{bmatrix} v \\ u \end{bmatrix}\] <h2 id="dimensions-des-variables">Dimensions des variables</h2> <p>Dans notre simulation :</p> \[X \in \mathbb{R}^{2 \times 1}\] \[U \in \mathbb{R}^{1 \times 1}\] \[\dot{X} \in \mathbb{R}^{2 \times 1}\] <p>On aura donc :</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">X</span> <span class="o">=</span> <span class="p">[[</span><span class="n">x</span><span class="p">],</span>
+     <span class="p">[</span><span class="n">v</span><span class="p">]]</span>
+
+<span class="n">U</span> <span class="o">=</span> <span class="p">[[</span><span class="n">u</span><span class="p">]]</span>
+
+<span class="n">dX</span> <span class="o">=</span> <span class="p">[[</span><span class="n">dx</span><span class="p">],</span>
+      <span class="p">[</span><span class="n">dv</span><span class="p">]]</span>
+</code></pre></div></div> <p>Il est important de conserver ces dimensions pendant toute la simulation.</p> <h1 id="2-le-modèle-dynamique">2. Le modèle dynamique</h1> <p>Le rôle de la fonction <code class="language-plaintext highlighter-rouge">model</code> est de calculer la dérivée de l’état.</p> <p>Elle prend en entrée :</p> <ul> <li> <code class="language-plaintext highlighter-rouge">X</code> : état actuel ;</li> <li> <code class="language-plaintext highlighter-rouge">U</code> : commande actuelle.</li> </ul> <p>Elle retourne :</p> <ul> <li> <code class="language-plaintext highlighter-rouge">dX</code> : dérivée de l’état.</li> </ul> <p>On veut donc construire :</p> <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>U -&gt; Modèle -&gt; dX
+</code></pre></div></div> <p>Pour notre système :</p> \[\dot{x} = v\] \[\dot{v} = u\] <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">model</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">U</span><span class="p">):</span>
+    <span class="n">x</span><span class="p">,</span> <span class="n">v</span> <span class="o">=</span> <span class="n">X</span><span class="p">.</span><span class="nf">flatten</span><span class="p">()</span>
+
+    <span class="n">dx</span> <span class="o">=</span> <span class="n">v</span>
+    <span class="n">dv</span> <span class="o">=</span> <span class="n">U</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">([[</span><span class="n">dx</span><span class="p">],</span> <span class="p">[</span><span class="n">dv</span><span class="p">]])</span>
+</code></pre></div></div> <h2 id="vérification-noubliez-pas-de-tester-">Vérification (N’oubliez pas de tester !)</h2> <p>On peut tester le modèle avec :</p> \[x = 2, v = 3, u = 1\] <p>On doit obtenir :</p> \[\dot{x} = 3, \dot{v} = 1\] <h3 id="cellule-code">Cellule Code</h3> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">]])</span>
+<span class="n">U</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">]])</span>
+
+<span class="n">dX</span> <span class="o">=</span> <span class="nf">model</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">U</span><span class="p">)</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">X =</span><span class="sh">"</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">U =</span><span class="sh">"</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">U</span><span class="p">)</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">dX =</span><span class="sh">"</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">dX</span><span class="p">)</span>
+</code></pre></div></div> <h2 id="exercice-1">Exercice 1</h2> <p>Modifier les valeurs de <code class="language-plaintext highlighter-rouge">X</code> et <code class="language-plaintext highlighter-rouge">U</code>.</p> <p>Vérifier que :</p> \[\dot{x} = v\] <p>et :</p> \[\dot{v} = u\] <p>Essayez par exemple :</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">([[</span><span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]])</span>
+<span class="n">U</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">([[</span><span class="mi">4</span><span class="p">]])</span>
+</code></pre></div></div> <h1 id="3-la-fonction-de-mesure">3. La fonction de mesure</h1> <p>Le système possède deux états :</p> \[X = \begin{bmatrix} x \\ v \end{bmatrix}\] <p>mais supposons que notre capteur mesure uniquement la position.</p> <p>La sortie est donc :</p> \[Y = x\] <p>On définit une fonction :</p> <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>X -&gt; h() -&gt; Y
+</code></pre></div></div> <p>La fonction <code class="language-plaintext highlighter-rouge">h</code> permet de séparer :</p> <ul> <li>l’état interne du système ;</li> <li>les grandeurs que l’on observe ou mesure.</li> </ul> <h3 id="cellule-code-1">Cellule Code</h3> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">h</span><span class="p">(</span><span class="n">X</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">([[</span><span class="n">X</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]]])</span>
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">]])</span>
+
+<span class="n">Y</span> <span class="o">=</span> <span class="nf">h</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">X =</span><span class="sh">"</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Y =</span><span class="sh">"</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">Y</span><span class="p">)</span>
+</code></pre></div></div> <p>Ici :</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">X</span> <span class="o">=</span> <span class="p">[[</span><span class="n">x</span><span class="p">],</span>
+     <span class="p">[</span><span class="n">v</span><span class="p">]]</span>
+
+<span class="n">Y</span> <span class="o">=</span> <span class="p">[[</span><span class="n">x</span><span class="p">]]</span>
+</code></pre></div></div> <p>Donc <code class="language-plaintext highlighter-rouge">X</code> est de taille <code class="language-plaintext highlighter-rouge">(2, 1)</code> alors que <code class="language-plaintext highlighter-rouge">Y</code> est de taille <code class="language-plaintext highlighter-rouge">(1, 1)</code>.</p> <h1 id="4-intégration-deuler-explicite">4. Intégration d’Euler explicite</h1> <p>Le modèle donne une dérivée :</p> \[\dot{X} = f(X, U)\] <p>Mais nous voulons connaître l’état au temps suivant.</p> <p>La méthode d’Euler explicite donne :</p> \[X_{k+1} = X_k + \Delta t \dot{X}_k\] <p>En Python :</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">X</span> <span class="o">=</span> <span class="n">X</span> <span class="o">+</span> <span class="n">dX</span> <span class="o">*</span> <span class="n">dt</span>
+</code></pre></div></div> <p>où :</p> <ul> <li> <code class="language-plaintext highlighter-rouge">X</code> est l’état actuel ;</li> <li> <code class="language-plaintext highlighter-rouge">dX</code> est sa dérivée ;</li> <li> <code class="language-plaintext highlighter-rouge">dt</code> est le pas de temps.</li> </ul> <h3 id="exemple">Exemple</h3> <p>Si :</p> \[X = \begin{bmatrix} 2 \\ 3 \end{bmatrix} \quad \text{et} \quad \dot X = \begin{bmatrix} 3 \\ 1 \end{bmatrix}\] <p>avec $dt = 0.1$</p> <p>alors :</p> \[X_{k+1} = \begin{bmatrix} 2 \\ 3 \end{bmatrix} + 0.1 \begin{bmatrix} 3 \\ 1 \end{bmatrix}\] <p>donc :</p> \[X_{k+1} = \begin{bmatrix} 2.3 \\ 3.1 \end{bmatrix}\] <h3 id="cellule-code-2">Cellule Code</h3> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">]])</span>
+<span class="n">dX</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">([[</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">]])</span>
+
+<span class="n">dt</span> <span class="o">=</span> <span class="mf">0.1</span>
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">X</span> <span class="o">+</span> <span class="n">dX</span> <span class="o">*</span> <span class="n">dt</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+</code></pre></div></div> <h1 id="5-première-boucle-de-simulation">5. Première boucle de simulation</h1> <p>Nous allons maintenant simuler le système.</p> <p>On impose une accélération constante :</p> \[u = 1\] <p>Le système part de :</p> \[x(0) = 0\] \[v(0) = 0\] <p>On définit :</p> <ul> <li>la durée de simulation ;</li> <li>le pas de temps ;</li> <li>l’état initial ;</li> <li>la commande.</li> </ul> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">tf</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="mf">0.01</span>
+<span class="n">times</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">tf</span><span class="p">,</span> <span class="n">dt</span><span class="p">)</span>
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">]])</span>
+<span class="n">U</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">]])</span>
+</code></pre></div></div> <h2 id="boucle-de-simulation">Boucle de simulation</h2> <p>À chaque instant :</p> <ol> <li>on calcule <code class="language-plaintext highlighter-rouge">dX</code> avec le modèle ;</li> <li>on met à jour <code class="language-plaintext highlighter-rouge">X</code> avec la méthode d’Euler explicite.</li> </ol> <h3 id="cellule-code-3">Cellule Code</h3> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">times</span><span class="p">:</span>
+    <span class="n">dX</span> <span class="o">=</span> <span class="nf">model</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">U</span><span class="p">)</span>
+    <span class="n">X</span> <span class="o">=</span> <span class="n">X</span> <span class="o">+</span> <span class="n">dX</span> <span class="o">*</span> <span class="n">dt</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+</code></pre></div></div> <h1 id="6-stockage-des-résultats">6. Stockage des résultats</h1> <p>À la fin de la simulation, nous ne possédons que l’état final.</p> <p>Pour tracer l’évolution du système, il faut conserver les états à chaque instant.</p> <p>On crée :</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">X_vec</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">zeros</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+</code></pre></div></div> <p>On ajoute ensuite chaque nouvel état comme une colonne :</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">X_vec</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">hstack</span><span class="p">((</span><span class="n">X_vec</span><span class="p">,</span> <span class="n">X</span><span class="p">))</span>
+</code></pre></div></div> <p>On obtient :</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>          t0    t1    t2    t3    ...
+
+x         x0    x1    x2    x3
+v         v0    v1    v2    v3
+</code></pre></div></div> <h3 id="cellule-code-4">Cellule Code</h3> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">tf</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="mf">0.01</span>
+<span class="n">times</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">tf</span><span class="p">,</span> <span class="n">dt</span><span class="p">)</span>
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">]])</span>
+<span class="n">U</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">]])</span>
+
+<span class="n">X_vec</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">zeros</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">times</span><span class="p">:</span>
+    <span class="n">dX</span> <span class="o">=</span> <span class="nf">model</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">U</span><span class="p">)</span>
+    <span class="n">X</span> <span class="o">=</span> <span class="n">X</span> <span class="o">+</span> <span class="n">dX</span> <span class="o">*</span> <span class="n">dt</span>
+
+    <span class="n">X_vec</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">hstack</span><span class="p">((</span><span class="n">X_vec</span><span class="p">,</span> <span class="n">X</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="p">.</span><span class="nf">figure</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="p">.</span><span class="nf">plot</span><span class="p">(</span><span class="n">times</span><span class="p">,</span> <span class="n">X_vec</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:],</span> <span class="n">label</span><span class="o">=</span><span class="sh">'</span><span class="s">Position</span><span class="sh">'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">plot</span><span class="p">(</span><span class="n">times</span><span class="p">,</span> <span class="n">X_vec</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="p">:],</span> <span class="n">label</span><span class="o">=</span><span class="sh">'</span><span class="s">Vitesse</span><span class="sh">'</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="p">.</span><span class="nf">xlabel</span><span class="p">(</span><span class="sh">'</span><span class="s">Temps (s)</span><span class="sh">'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">show</span><span class="p">()</span>
+</code></pre></div></div> <h1 id="7-ajouter-la-mesure">7. Ajouter la mesure</h1> <p>Nous allons maintenant utiliser <code class="language-plaintext highlighter-rouge">h(X)</code> dans la boucle.</p> <p>La chaîne devient :</p> <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>X -&gt; Modèle -&gt; dX -&gt; Euler -&gt; X -&gt; h -&gt; Y
+</code></pre></div></div> <p>Nous allons également stocker <code class="language-plaintext highlighter-rouge">Y</code>.</p> <h3 id="cellule-code-5">Cellule Code</h3> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Y_vec</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">zeros</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">]])</span>
+
+<span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">times</span><span class="p">:</span>
+    <span class="n">dX</span> <span class="o">=</span> <span class="nf">model</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">U</span><span class="p">)</span>
+    <span class="n">X</span> <span class="o">=</span> <span class="n">X</span> <span class="o">+</span> <span class="n">dX</span> <span class="o">*</span> <span class="n">dt</span>
+
+    <span class="n">Y</span> <span class="o">=</span> <span class="nf">h</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+    <span class="n">X_vec</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">hstack</span><span class="p">((</span><span class="n">X_vec</span><span class="p">,</span> <span class="n">X</span><span class="p">))</span>
+    <span class="n">Y_vec</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">hstack</span><span class="p">((</span><span class="n">Y_vec</span><span class="p">,</span> <span class="n">Y</span><span class="p">))</span>
+</code></pre></div></div> <h1 id="8-ajouter-une-commande">8. Ajouter une commande</h1> <p>Jusqu’ici, l’accélération était imposée :</p> \[u = 1\] <p>Nous voulons maintenant que le système atteigne une position souhaitée :</p> \[x_d = 5\] <p>Nous avons besoin d’un contrôleur.</p> <p>On choisit un contrôleur de type Proportionnel-Dérivé :</p> \[u = K_p(x_d-x)-K_dv\] <p>où :</p> <ul> <li>$K_p$ contrôle l’erreur de position ;</li> <li>$K_d$ agit sur la vitesse ;</li> <li>$x_d-x$ est l’erreur de position.</li> </ul> <p>L’objectif est :</p> \[x \rightarrow x_d\] <h1 id="9-fonction-de-guidance">9. Fonction de guidance</h1> <p>Dans une architecture de commande, on peut séparer :</p> <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Consigne
+   ↓
+Guidance
+   ↓
+Référence
+   ↓
+Contrôleur
+   ↓
+Commande
+</code></pre></div></div> <p>La fonction <code class="language-plaintext highlighter-rouge">guidance</code> calcule ici l’accélération de référence.</p> <p>Elle reçoit :</p> <ul> <li>l’état <code class="language-plaintext highlighter-rouge">X</code> ;</li> <li>la consigne <code class="language-plaintext highlighter-rouge">Xd</code>.</li> </ul> <p>Elle retourne :</p> <ul> <li> <code class="language-plaintext highlighter-rouge">ud</code>.</li> </ul> <h3 id="cellule-code-6">Cellule Code</h3> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">kp</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">kd</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="k">def</span> <span class="nf">guidance</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Xd</span><span class="p">,</span> <span class="n">kp</span><span class="p">,</span> <span class="n">kd</span><span class="p">):</span>
+    <span class="n">x</span><span class="p">,</span> <span class="n">v</span> <span class="o">=</span> <span class="n">X</span><span class="p">.</span><span class="nf">flatten</span><span class="p">()</span>
+
+    <span class="n">ud</span> <span class="o">=</span> <span class="n">kp</span> <span class="o">*</span> <span class="p">(</span><span class="n">Xd</span> <span class="o">-</span> <span class="n">x</span><span class="p">)</span> <span class="o">-</span> <span class="n">kd</span> <span class="o">*</span> <span class="n">v</span>
+
+    <span class="k">return</span> <span class="n">ud</span>
+</code></pre></div></div> <p>Dans cette fonction :</p> \[e = x_d-x\] <p>puis :</p> \[u_d = K_p e-K_dv\] <p>Le terme $K_p e$ pousse le système vers la consigne.</p> <p>Le terme $-K_dv$ permet de tenir compte de la vitesse du système.</p> <h1 id="10-fonction-de-contrôle">10. Fonction de contrôle</h1> <p>La fonction <code class="language-plaintext highlighter-rouge">ctrl</code> transforme la référence de commande <code class="language-plaintext highlighter-rouge">ud</code> en commande du système <code class="language-plaintext highlighter-rouge">U</code>.</p> <p>Ici, le contrôleur est volontairement très simple :</p> \[U = \begin{bmatrix} u_d \end{bmatrix}\] <h3 id="cellule-code-7">Cellule Code</h3> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">ctrl</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">ud</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">([[</span><span class="n">ud</span><span class="p">]])</span>
+</code></pre></div></div> <h1 id="11-boucle-de-simulation-avec-commande">11. Boucle de simulation avec commande</h1> <p>Nous avons maintenant toutes les fonctions nécessaires.</p> <p>À chaque instant :</p> <ol> <li>définir la consigne ;</li> <li>calculer la référence avec <code class="language-plaintext highlighter-rouge">guidance</code> ;</li> <li>calculer la commande avec <code class="language-plaintext highlighter-rouge">ctrl</code> ;</li> <li>calculer la dynamique avec <code class="language-plaintext highlighter-rouge">model</code> ;</li> <li>intégrer avec Euler ;</li> <li>mesurer avec <code class="language-plaintext highlighter-rouge">h</code> ;</li> <li>stocker les résultats.</li> </ol> <p>La boucle est donc :</p> <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Xd -&gt; Guidance -&gt; ud -&gt; Contrôleur -&gt; U -&gt; Modèle -&gt; dX -&gt; Euler -&gt; X -&gt; h -&gt; Y
+</code></pre></div></div> <h3 id="cellule-code-8">Cellule Code</h3> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">tf</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="mf">0.05</span>
+<span class="n">times</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">tf</span><span class="p">,</span> <span class="n">dt</span><span class="p">)</span>
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">]])</span>
+<span class="n">dX</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">]])</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">]])</span>
+<span class="n">U</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">]])</span>
+
+<span class="n">X_vec</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">zeros</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+<span class="n">Y_vec</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">zeros</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+<span class="n">U_vec</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">zeros</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+<span class="n">Y_d_vec</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">zeros</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">times</span><span class="p">:</span>
+    <span class="n">Xd</span> <span class="o">=</span> <span class="mi">5</span>
+    <span class="n">Y_d</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">([[</span><span class="n">Xd</span><span class="p">]])</span>
+
+    <span class="n">ud</span> <span class="o">=</span> <span class="nf">guidance</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Xd</span><span class="p">,</span> <span class="n">kp</span><span class="p">,</span> <span class="n">kd</span><span class="p">)</span>
+    <span class="n">U</span> <span class="o">=</span> <span class="nf">ctrl</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">ud</span><span class="p">)</span>
+
+    <span class="n">dX</span> <span class="o">=</span> <span class="nf">model</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">U</span><span class="p">)</span>
+    <span class="n">X</span> <span class="o">=</span> <span class="n">X</span> <span class="o">+</span> <span class="n">dX</span> <span class="o">*</span> <span class="n">dt</span>
+
+    <span class="n">Y</span> <span class="o">=</span> <span class="nf">h</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+    <span class="n">X_vec</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">hstack</span><span class="p">((</span><span class="n">X_vec</span><span class="p">,</span> <span class="n">X</span><span class="p">))</span>
+    <span class="n">Y_vec</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">hstack</span><span class="p">((</span><span class="n">Y_vec</span><span class="p">,</span> <span class="n">Y</span><span class="p">))</span>
+    <span class="n">U_vec</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">hstack</span><span class="p">((</span><span class="n">U_vec</span><span class="p">,</span> <span class="n">U</span><span class="p">))</span>
+    <span class="n">Y_d_vec</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">hstack</span><span class="p">((</span><span class="n">Y_d_vec</span><span class="p">,</span> <span class="n">Y_d</span><span class="p">))</span>
+</code></pre></div></div> <h1 id="12-visualisation-des-résultats">12. Visualisation des résultats</h1> <p>Nous pouvons maintenant afficher :</p> <ul> <li>la position ;</li> <li>la consigne ;</li> <li>la vitesse ;</li> <li>la commande.</li> </ul> <h3 id="cellule-code-9">Cellule Code</h3> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">plt</span><span class="p">.</span><span class="nf">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="p">.</span><span class="nf">plot</span><span class="p">(</span><span class="n">times</span><span class="p">,</span> <span class="n">Y_vec</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:],</span> <span class="n">label</span><span class="o">=</span><span class="sh">'</span><span class="s">Position</span><span class="sh">'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">plot</span><span class="p">(</span><span class="n">times</span><span class="p">,</span> <span class="n">Y_d_vec</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:],</span> <span class="sh">'</span><span class="s">--</span><span class="sh">'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sh">'</span><span class="s">Consigne</span><span class="sh">'</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="p">.</span><span class="nf">xlabel</span><span class="p">(</span><span class="sh">'</span><span class="s">Temps (s)</span><span class="sh">'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">ylabel</span><span class="p">(</span><span class="sh">'</span><span class="s">Position (m)</span><span class="sh">'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">show</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="p">.</span><span class="nf">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="p">.</span><span class="nf">plot</span><span class="p">(</span><span class="n">times</span><span class="p">,</span> <span class="n">X_vec</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="p">:],</span> <span class="n">label</span><span class="o">=</span><span class="sh">'</span><span class="s">Vitesse</span><span class="sh">'</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="p">.</span><span class="nf">xlabel</span><span class="p">(</span><span class="sh">'</span><span class="s">Temps (s)</span><span class="sh">'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">ylabel</span><span class="p">(</span><span class="sh">'</span><span class="s">Vitesse (m/s)</span><span class="sh">'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">show</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="p">.</span><span class="nf">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="p">.</span><span class="nf">plot</span><span class="p">(</span><span class="n">times</span><span class="p">,</span> <span class="n">U_vec</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:],</span> <span class="n">label</span><span class="o">=</span><span class="sh">'</span><span class="s">Commande</span><span class="sh">'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="sh">'</span><span class="s">green</span><span class="sh">'</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="p">.</span><span class="nf">xlabel</span><span class="p">(</span><span class="sh">'</span><span class="s">Temps (s)</span><span class="sh">'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">ylabel</span><span class="p">(</span><span class="sh">'</span><span class="s">Accélération (m/s²)</span><span class="sh">'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">show</span><span class="p">()</span>
+</code></pre></div></div> <h1 id="13-comparer-plusieurs-contrôleurs">13. Comparer plusieurs contrôleurs</h1> <p>Nous allons maintenant faire plusieurs simulations.</p> <p>On souhaite comparer différentes valeurs de $K_p$ :</p> \[K_p \in \{0.5,\ 1,\ 2,\ 5\}\] <p>Chaque simulation doit :</p> <ol> <li>repartir du même état initial ;</li> <li>utiliser une valeur différente de <code class="language-plaintext highlighter-rouge">kp</code> ;</li> <li>être simulée sur toute la durée ;</li> <li>stocker son résultat ;</li> <li>être affichée avec les autres.</li> </ol> <h3 id="cellule-code-10">Cellule Code</h3> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">kp_values</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+
+<span class="n">results</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">zeros</span><span class="p">((</span><span class="nf">len</span><span class="p">(</span><span class="n">kp_values</span><span class="p">),</span> <span class="nf">len</span><span class="p">(</span><span class="n">times</span><span class="p">)))</span>
+
+<span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">kp</span> <span class="ow">in</span> <span class="nf">enumerate</span><span class="p">(</span><span class="n">kp_values</span><span class="p">):</span>
+    <span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">]])</span>
+
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">t</span> <span class="ow">in</span> <span class="nf">enumerate</span><span class="p">(</span><span class="n">times</span><span class="p">):</span>
+        <span class="n">Xd</span> <span class="o">=</span> <span class="mi">5</span>
+
+        <span class="n">ud</span> <span class="o">=</span> <span class="nf">guidance</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Xd</span><span class="p">,</span> <span class="n">kp</span><span class="p">,</span> <span class="n">kd</span><span class="p">)</span>
+        <span class="n">U</span> <span class="o">=</span> <span class="nf">ctrl</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">ud</span><span class="p">)</span>
+
+        <span class="n">dX</span> <span class="o">=</span> <span class="nf">model</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">U</span><span class="p">)</span>
+        <span class="n">X</span> <span class="o">=</span> <span class="n">X</span> <span class="o">+</span> <span class="n">dX</span> <span class="o">*</span> <span class="n">dt</span>
+
+        <span class="n">results</span><span class="p">[</span><span class="n">j</span><span class="p">,</span> <span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+
+<span class="n">plt</span><span class="p">.</span><span class="nf">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">kp</span> <span class="ow">in</span> <span class="nf">enumerate</span><span class="p">(</span><span class="n">kp_values</span><span class="p">):</span>
+    <span class="n">plt</span><span class="p">.</span><span class="nf">plot</span><span class="p">(</span><span class="n">times</span><span class="p">,</span> <span class="n">results</span><span class="p">[</span><span class="n">j</span><span class="p">,</span> <span class="p">:],</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="sh">'</span><span class="s">kp = </span><span class="si">{</span><span class="n">kp</span><span class="si">}</span><span class="sh">'</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="p">.</span><span class="nf">axhline</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="sh">'</span><span class="s">black</span><span class="sh">'</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="sh">'</span><span class="s">--</span><span class="sh">'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sh">'</span><span class="s">Consigne</span><span class="sh">'</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="p">.</span><span class="nf">xlabel</span><span class="p">(</span><span class="sh">'</span><span class="s">Temps (s)</span><span class="sh">'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">ylabel</span><span class="p">(</span><span class="sh">'</span><span class="s">Position (m)</span><span class="sh">'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">show</span><span class="p">()</span>
+</code></pre></div></div> </article> </div> </div> <div class="col-sm-3"> <nav id="toc-sidebar" class="sticky-top toc toc-sidebar" aria-label="Table of contents" data-toc-collapse="expanded" data-toc-collapse-depth=""></nav> </div> </div> </div> <footer class="sticky-bottom mt-5" role="contentinfo"> <div class="container"> © Copyright 2026 Fabien M. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="external nofollow noopener">Unsplash</a>. </div> </footer> <script>
+  window.alFolio = {
+    compatBootstrap: false
+  };
+</script> <script src="/assets/js/nav-toggle.js?v=141bd79a73ebc0f0b6ea58e440ae79fc"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?v=e49affc7bd2646f6acdad1dbe02c2359" type="text/javascript"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/al_math/js/mathjax-setup.js"></script> <script src="/assets/js/tooltips-setup.js?v=fe487e99db6c43751e6e7bdb2d6a0611"></script> <script defer src="https://cdn.jsdelivr.net/npm/tocbot@4.36.4/dist/tocbot.min.js" integrity="sha256-lo/r+jQ81wWrxdIiiiEEd538z4+dTJTt+leOuAS7GCw=" crossorigin="anonymous"></script> <script src="/assets/js/no_defer.js?v=53b1b1a645525975c963ce8bf8bfefcf"></script> <script defer src="/assets/js/common.js?v=87baac90f765f2f3362dcf6aaf312a8a"></script> <script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?v=896d254890d9b47f0281f63bfccf0dee"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/al_img_tools/js/zoom.js"></script> <script defer src="/assets/js/progress-bar.js?v=499464c5c63ced6cf7ad62509f1e2610" type="text/javascript"></script> <script src="https://cdn.jsdelivr.net/npm/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js" integrity="sha256-uMJJ3EoTyfRBoTbR+lrfu1uRQ87RZG8AR3cVNuQVeFg=" crossorigin="anonymous"></script> <script>
+    addBackToTop();
+  </script> <script type="module" src="/assets/al_search/js/search/ninja-keys.min.js"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/al_search/js/search-setup.js"></script> <script>
+// get the ninja-keys element
+const ninja = document.querySelector('ninja-keys');
+
+// add the home and posts menu items
+ninja.data = [{
+    id: "nav-about",
+    title: "About",
+    section: "Navigation",
+    handler: () => {
+      window.location.href = "/";
+    },
+  },{id: "nav-enseignement",
+          title: "Enseignement",
+          description: "Cours et ressources.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/teaching/";
+          },
+        },{id: "teachings-python-fundamentals",
+          title: 'Python Fundamentals',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/python-fundamentals.html";
+            },},{id: "teachings-python-tp",
+          title: 'Python - TP',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/enseignement/python/TP1";
+            },},{id: "teachings-python-tp-note",
+          title: 'Python - TP note',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/enseignement/python/tp_note";
+            },},{id: "teachings-python-conditions-loops-and-exceptions",
+          title: 'Python — Conditions, loops and exceptions',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/enseignement/cheatsheets/python/control_flow";
+            },},{id: "teachings-python-main-fonctions",
+          title: 'Python — Main fonctions',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/enseignement/cheatsheets/python/functions";
+            },},{id: "teachings-python-keywords-and-instructions",
+          title: 'Python — Keywords and instructions',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/enseignement/cheatsheets/python/instructions";
+            },},{id: "teachings-python-matplotlib",
+          title: 'Python — MatPlotLib',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/enseignement/cheatsheets/python/matplotlib";
+            },},{id: "teachings-python-numpy",
+          title: 'Python — NumPy',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/enseignement/cheatsheets/python/numpy";
+            },},{id: "teachings-python-operators",
+          title: 'Python — Operators',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/enseignement/cheatsheets/python/operators";
+            },},{id: "teachings-python-data-types",
+          title: 'Python — Data types',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/enseignement/cheatsheets/python/data_types";
+            },},{id: "teachings-python-exercice-gestion-d-un-inventaire",
+          title: 'Python - Exercice - Gestion d’un inventaire',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/enseignement/python/ex1";
+            },},{id: "teachings-python-exercice-gestion-d-un-inventaire",
+          title: 'Python - Exercice - Gestion d’un inventaire',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/enseignement/python/ex2";
+            },},{id: "teachings-python-scéance-1",
+          title: 'Python - Scéance 1',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/enseignement/python/sceance1";
+            },},{id: "teachings-python-scéance-2",
+          title: 'Python - Scéance 2',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/enseignement/python/sceance2";
+            },},{id: "teachings-python-scéance-3",
+          title: 'Python - Scéance 3',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/enseignement/python/sceance3";
+            },},{id: "teachings-python-scéance-4",
+          title: 'Python - Scéance 4',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/enseignement/python/sceance4";
+            },},{id: "teachings-python-convention-de-nommage",
+          title: 'Python - Convention de nommage',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/enseignement/python/scripts/cours_conventions_nommage";
+            },},{id: "teachings-python-outils-de-debug",
+          title: 'Python - Outils de debug',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/enseignement/python/scripts/cours_debug";
+            },},{id: "teachings-python-dictionnaires",
+          title: 'Python - Dictionnaires',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/enseignement/python/scripts/cours_dictionnaires";
+            },},{id: "teachings-python-fonctions",
+          title: 'Python - Fonctions',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/enseignement/python/scripts/cours_fonctions";
+            },},{id: "teachings-python-formatage",
+          title: 'Python - Formatage',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/enseignement/python/scripts/cours_formatages";
+            },},{id: "teachings-python-imports",
+          title: 'Python - Imports',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/enseignement/python/scripts/cours_imports";
+            },},{id: "teachings-python-listes",
+          title: 'Python - Listes',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/enseignement/python/scripts/cours_listes";
+            },},{id: "teachings-python-numpy",
+          title: 'Python - Numpy',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/enseignement/python/scripts/cours_numpy";
+            },},{id: "teachings-python-opérateurs",
+          title: 'Python - Opérateurs',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/enseignement/python/scripts/cours_operateurs";
+            },},{id: "teachings-python-structures",
+          title: 'Python - Structures',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/enseignement/python/scripts/cours_structures";
+            },},{id: "teachings-python-types-basiques",
+          title: 'Python - Types basiques',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/enseignement/python/scripts/cours_types_basiques";
+            },},{id: "teachings-python-types-basiques",
+          title: 'Python - Types basiques',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/enseignement/python/scripts/demo_matplotlib";
+            },},{
+      id: 'light-theme',
+      title: 'Change theme to light',
+      description: 'Change the theme of the site to Light',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("light");
+      },
+    },
+    {
+      id: 'dark-theme',
+      title: 'Change theme to dark',
+      description: 'Change the theme of the site to Dark',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("dark");
+      },
+    },
+    {
+      id: 'system-theme',
+      title: 'Use system default theme',
+      description: 'Change the theme of the site to System Default',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("system");
+      },
+    },];
+
+</script> <script src="/assets/al_search/js/shortcut-key.js"></script> </body> </html>

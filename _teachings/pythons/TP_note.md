@@ -6,6 +6,9 @@ toc:
   sidebar: right
 ---
 
+[Correction](/assets/codes/python/exercices/correction_tp_note.py)
+
+
 # Exercice - À vous de jouer
 
 On considère maintenant le système :
@@ -30,7 +33,7 @@ $$
 x_d = 5
 $$
 
-Le contrôleur doit utiliser :
+Le guidage doit utiliser :
 
 $$
 u_r = 2 (x_d - x)
@@ -95,10 +98,7 @@ et visualiser les quatre simulations sur le même graphique.
 
 
 
-
-
-
-## Bareme :
+## Barème :
 
 - 5 points pour la syntaxe
 - 2 points pour l'initialisation des vecteurs et des variables de stockage

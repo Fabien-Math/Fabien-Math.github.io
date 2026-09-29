@@ -591,7 +591,7 @@ def guidance(X, Xd, kp, kd):
 
     ud = kp * (Xd - x) - kd * v
 
-    return ud
+    return np.array([[ud]])
 ```
 
 Dans cette fonction :
@@ -627,7 +627,7 @@ $$
 
 ```python
 def ctrl(X, ud):
-    return np.array([[ud]])
+    return np.array([[ud[0, 0]]])
 ```
 
 
@@ -659,10 +659,9 @@ tf = 10
 dt = 0.05
 times = np.arange(0, tf, dt)
 
-X = np.array([[0], [0]])
-dX = np.array([[0], [0]])
-Y = np.array([[0]])
-U = np.array([[0]])
+X = np.array([[0.0], [0.0]])
+Y = np.array([[0.0]])
+U = np.array([[0.0]])
 
 X_vec = np.zeros((2, 0))
 Y_vec = np.zeros((1, 0))
@@ -677,7 +676,7 @@ for t in times:
     U = ctrl(X, ud)
 
     dX = model(X, U)
-    X = X + dX * dt
+    X += dX * dt
 
     Y = h(X)
 
@@ -726,7 +725,7 @@ plt.figure(figsize=(8, 4))
 plt.plot(times, U_vec[0, :], label='Commande', color='green')
 
 plt.xlabel('Temps (s)')
-plt.ylabel('Accélération (m/s²)')
+plt.ylabel('Acceleration (m/s²)')
 plt.grid()
 plt.legend()
 plt.show()
